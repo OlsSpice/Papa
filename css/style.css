@@ -490,3 +490,15 @@ h6,
         margin-bottom: -75px;
     }
 }
+
+.me-logo {
+    --size: 4vw;
+    width: var(--size);
+    height: var(--size);
+}
+
+.me-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
