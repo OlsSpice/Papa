@@ -492,7 +492,7 @@ h6,
 }
 
 .me-logo {
-    --size: 2.5vw;
+    --size: 3vw;
     width: var(--size);
     height: var(--size);
 }
