@@ -502,3 +502,37 @@ h6,
     flex-flow: row nowrap;
     align-items: center;
 }
+
+
+.phone-form {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.phone-form h5 {
+    text-align: left;
+}
+
+.phone-form button {
+    margin-left: 0;
+}
+
+.phone-form input {
+     background-color: #d0eeffa1;
+}
+
+@media (max-width: 990px) {
+    .phone-form {
+        justify-self: center;
+    }
+
+    .phone-form h5 {
+        text-align: center;
+    }
+
+    .phone-form button {
+        margin-left: 25%;
+    }
+}
