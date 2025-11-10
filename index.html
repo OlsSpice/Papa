@@ -863,45 +863,60 @@
     <script src="js/main.js"></script>
 
     <!-- Firebase -->
-    <script type="module">
-        // Firebase libs
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-        import { getFirestore, doc, addDoc, collection } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyAp8sgI6naW7nYmtoAQdKEM-Aam2_kE17M",
-          authDomain: "action-agency-site.firebaseapp.com",
-          projectId: "action-agency-site",
-          storageBucket: "action-agency-site.firebasestorage.app",
-          messagingSenderId: "110185184995",
-          appId: "1:110185184995:web:6ce62c424eca31404ecfd6"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        const coll = collection(db, "site_forms");
+    <script>
+    const form = document.getElementById('myForm');
+    const formPhone = document.querySelector('.phone-form form'); // Маленькая форма с номером
 
-        // Firebase Form
-        const form = document.getElementById('myForm');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
+    const TELEGRAM_TOKEN = '8251382336:AAgwKL0ny63M9kMs5MejzGyScf3YcMM_oHc'; // Твой токен
+    const TELEGRAM_CHAT_ID = '-1003450381746'; // ID твоего канала Leads_paparazzi_cam
 
-            const formData = new FormData(form);
-            console.log(formData);
-            let data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
+    async function sendToTelegram(message) {
+        try {
+            const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message, parse_mode: 'HTML' })
             });
-
-            try {
-                await addDoc(coll, data);
-            } catch (error) {
-                console.error('Firebase error:', error);
+            if (response.ok) {
+                alert('Дякую! Ми зв’яжемося з вами протягом 30 секунд 🚀');
+                form.reset();
+                if (formPhone) formPhone.reset();
+            } else {
+                alert('Щось пішло не так... Спробуй ще раз');
             }
+        } catch (err) {
+            alert('Помилка мережі. Перевір інтернет');
+        }
+    }
+
+    // Большая форма
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+            let text = '<b>🔥 НОВА ЗАЯВКА З САЙТУ paparazzi.cam</b>\n\n';
+            data.forEach((value, key) => {
+                if (key === 'Телeфон') text += `📱 Номер: <b>${value}</b>\n`;
+                else if (key === 'name') text += `👤 Ім’я: <b>${value}</b>\n`;
+                else if (key === 'email') text += `✉️ Email: <b>${value}</b>\n`;
+                else if (key === 'Продукт') text += `🛒 Послуга: <b>${value}</b>\n`;
+                else if (key === 'message') text += `💬 Повідомлення: ${value}\n`;
+            });
+            text += `\n🕐 Час: ${new Date().toLocaleString('uk-UA')}`;
+            sendToTelegram(text);
         });
-    </script>
+    }
+
+    // Маленькая форма с номером (в секции Quote)
+    if (formPhone) {
+        formPhone.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const phone = formPhone.querySelector('input[name="Телeфон"]')?.value || 'Не вказано';
+            const text = `<b>⚡ ШВИДКА ЗАЯВКА!</b>\n\n📱 Номер: <b>${phone}</b>\n🕐 Час: ${new Date().toLocaleString('uk-UA')}\n🌐 Сайт: paparazzi.cam`;
+            sendToTelegram(text);
+        });
+    }
+</script>
 
 </body>
 
