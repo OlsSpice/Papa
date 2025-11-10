@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
+
 <head>
+	<meta name=description content=Videoprodaction Paparazzi - снимаем истории, которые не забудут> 
+	<meta name=og:title content=Paparazzi> 
+	<meta name=og:description content=Production Kyiv> 
+	<meta name=og:image content=https://paparazzi.com/img/og-photo.jpg>
+	<meta name=og:image content=/img/og-photo.jpg>
     <meta charset="utf-8">
-    <title>Paparazzi.cam - Медіа, що продає твій бізнес</title>
+    <title>Paparazzi</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Відео продакшн, SMM, Рилсы, Реклама" name="keywords">
-    <meta content="Ми знімаємо відео, ведемо SMM, робимо рилсы та рекламу для вашого бізнесу" name="description">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -13,260 +19,840 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Завантаження...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-camera me-3"></i>Paparazzi.cam</h1>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Головна</a>
-                        <a href="#about" class="nav-item nav-link">Про нас</a>
-                        <a href="#services" class="nav-item nav-link">Послуги</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Кейси</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="#cases" class="dropdown-item">Наші кейси</a>
-                            </div>
-                        </div>
-                        <a href="#contact" class="nav-item nav-link">Контакти</a>
-                    </div>
-                    <a href="#contact" class="btn btn-primary rounded-pill py-2 px-4">Зв'язатися</a>
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kyiv, Ukraine</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+38 095 058 08 68</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>OlehYevdokimov@outlook.com</small>
                 </div>
-            </nav>
-
-            <div class="container-xxl bg-primary hero-header">
-                <div class="container">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated zoomIn">Найкращі медіа-рішення для вашого бізнесу</h1>
-                            <p class="text-white pb-3 animated zoomIn">Ми знімаємо круті відео, ведемо SMM, робимо вірусні рилсы та рекламу, яка[...]
-                            <a href="#contact" class="btn btn-outline-light rounded-pill py-3 px-5 animated slideInRight">Зв'язатися</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-end">
-                            <img class="img-fluid animated zoomIn" src="img/hero.png" alt="">
-                        </div>
-                    </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+    </div>
+    <!-- Topbar End -->
 
-        <!-- About Start -->
-        <div class="container-xxl py-6" id="about">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">Про нас</h1>
-                        <p>Ми - команда Paparazzi.cam, яка робить ваш бізнес видимим.</p>
-                        <p class="mb-4">Знімаємо професійне відео, ведемо соціальні мережі, створюємо контент, що продає.</p>
-                        <div class="row g-4 align-items-center mb-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="fa fa-check bg-light text-primary rounded-circle flex-shrink-0" style="width: 50px; height: 50px; line-height: 50px;"></i>
-                                    <p class="mb-0 ms-3">Професійна команда</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="fa fa-check bg-light text-primary rounded-circle flex-shrink-0" style="width: 50px; height: 50px; line-height: 50px;"></i>
-                                    <p class="mb-0 ms-3">Доступні ціни</p>
-                                </div>
-                            </div>
+
+    <!-- Navbar & Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0 me-container">
+                <img class="me-logo" src="assets/logos/android-chrome-192x192.png">
+                <h1 class="m-0"><i class="fa me-2"></i>Paparazzi</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <!-- <a href="index.html" class="nav-item nav-link active">Home</a> -->
+                    <a href="cases.html" class="nav-item nav-link">Кейси</a>
+                    <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Послуги</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="production.html" class="dropdown-item">Продакшн</a>
+                            <a href="marketing.html" class="dropdown-item">Маркетинг</a>
+                            <a href="digital.html" class="dropdown-item">Digital рiшення</a>
+                            <!-- <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="quote.html" class="dropdown-item">Free Quote</a> -->
                         </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="#contact">Зв'язатися</a>
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                            <img class="img-fluid w-100" src="img/about.jpg">
+                    <a href="contact.html" class="nav-item nav-link">Контакти</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Блог</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
                         </div>
                     </div>
                 </div>
+                <!-- <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button> -->
+                <!-- <a href="quote.html" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a> -->
+                <a href="#quote" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a>
             </div>
-        </div>
-        <!-- About End -->
+        </nav>
 
-        <!-- Services Start -->
-        <div class="container-xxl py-6" id="services">
-            <div class="container">
-                <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-5">Наші послуги</h1>
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Креатив & Інновації</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Розробка медіа контенту<br>Консультація безкоштовна</h1>
+                            <!-- <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Консультація</a> -->
+                            <a href="#quote" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Консультація</a>
+                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Продукти</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                            <div class="service-icon mb-4">
-                                <i class="fa fa-video fa-2x text-primary"></i>
-                            </div>
-                            <h4 class="mb-3">Відео продакшн</h4>
-                            <p class="m-0">Професійна зйомка відео для бізнесу</p>
-                            <a class="btn btn-lg btn-primary rounded-pill" href="#contact">
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                            <div class="service-icon mb-4">
-                                <i class="fa fa-instagram fa-2x text-primary"></i>
-                            </div>
-                            <h4 class="mb-3">SMM</h4>
-                            <p class="m-0">Ведення соціальних мереж</p>
-                            <a class="btn btn-lg btn-primary rounded-pill" href="#contact">
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                            <div class="service-icon mb-4">
-                                <i class="fa fa-play-circle fa-2x text-primary"></i>
-                            </div>
-                            <h4 class="mb-3">Рилсы та короткі відео</h4>
-                            <p class="m-0">Вірусний контент для Instagram та TikTok</p>
-                            <a class="btn btn-lg btn-primary rounded-pill" href="#contact">
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Креатив & Інновації</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Розробка медіа контенту<br>Консультація безкоштовна</h1>
+                            <!-- <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Консультація</a> -->
+                            <a href="#quote" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Консультація</a>
+                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Продукти</a>
                         </div>
                     </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <!-- Services End -->
+    </div>
+    <!-- Navbar & Carousel End -->
 
-        <!-- Quote Start -->
-        <div class="container-xxl py-6">
-            <div class="container">
-                <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-5">Зв'яжіться з нами</h1>
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="phone-form bg-primary rounded p-5">
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-12">
-                                        <input type="text" name="Телефон" class="form-control border-0" placeholder="Ваш телефон" style="height: 55px;" required>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                            <i class="fa fa-users text-primary"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Кількість змонтованих відео</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">1354</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                            <i class="fa fa-check text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-primary mb-0">Кількість зроблених сайтів</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">56</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                            <i class="fa fa-award text-primary"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Завершено рекламних компаній</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">756</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts Start -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">Про нас</h5>
+                        <h1 class="mb-0">Найкращі діджитал-рішення для бізнесу з 10-річним досвідом</h1>
+                    </div>
+                    <p class="mb-4">Ми пропонуємо комплексні медійні та цифрові послуги, які сприяють зростанню вашого бізнесу та підвищенню впізнаваності бренду. Наша команда експертів використовує інноваційні інструменти й технології, щоб досягти максимальних результатів у конкурентному середовищі</p>
+                    <div class="row g-0 mb-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Нагороди та визнання</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Професійна команда</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Підтримка 24/7</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Справедливі ціни</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Зателефонуйте з будь-яких питань</h5>
+                            <h4 class="text-primary mb-0">+095-058-08-68</h4>
+                        </div>
+                    </div>
+                    <!-- <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Зв'язатися</a> -->
+                    <a href="#quote" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Зв'язатися</a>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">ЧОМУ ОБИРАЮТЬ НАС?</h5>
+                <h1 class="mb-0">Ми тут, щоб допомогти вашому бізнесу зростати експоненційно</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-cubes text-white"></i>
+                            </div>
+                            <h4>Великий досвід у медіа сфері</h4>
+                            <p class="mb-0">Ми поєднуємо досвід, інновації та професіоналізм, щоб запропонувати вам найвищий рівень послуг</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-award text-white"></i>
+                            </div>
+                            <h4>Знаходимо блогерів для співпраці</h4>
+                            <p class="mb-0">Маємо багато контактів та звʼязків і медіа сфері, тому просувати деякі проекти вже набагато легше</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/feature.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-users-cog text-white"></i>
+                            </div>
+                            <h4>Є все необхідне обладнання та знання</h4>
+                            <p class="mb-0">Наші фахівці – це досвідчені експерти, які прагнуть досягати найкращих результатів для вас</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <h4>Отримайте результат в перші 3 місяці</h4>
+                            <p class="mb-0">Ми завжди на зв’язку, щоб допомогти вам у будь-який час, коли це потрібно</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">НАШІ ПОСЛУГИ</h5>
+                <h1 class="mb-0">Індивідуальні IT-рішення для успіху вашого бізнесу</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-shield-alt text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Медіа напрямок</h4>
+                        <p class="m-0">Ми забезпечимо всі ваші соціальні мережі трендовим та сучасним контентом. Завдяки цьому ви зможете набрати аудиторію та вийти на ринок медіа</p>
+                        <a href="production.html" class="btn btn-lg btn-primary rounded" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-chart-pie text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Маркетинг</h4>
+                        <p class="m-0">Налаштування рекламного кабінету та запуск реклами, через інструменти Google Ads, Facebook ads. А також пошук клієнтів через медіа контакти</p>
+                        <a href="marketing.html" class="btn btn-lg btn-primary rounded" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-code text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Розробка веб-сайтів</h4>
+                        <p class="m-0">Створюємо сучасні, адаптивні та функціональні сайти, які приваблюють клієнтів та сприяють зростанню вашого бізнесу. Від розробки до запуску – ми врахуємо всі ваші побажання</p>
+                        <a href="404.html" class="btn btn-lg btn-primary rounded" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fab fa-android text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Розробка мобільних додатків</h4>
+                        <p class="m-0">Пропонуємо інноваційні рішення для створення мобільних додатків під iOS та Android. Інтуїтивний дизайн, висока продуктивність та зручність використання – усе для вашого успіху</p>
+                        <a href="404.html" class="btn btn-lg btn-primary rounded" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-search text-white"></i>
+                        </div>
+                        <h4 class="mb-3">SEO-оптимізація</h4>
+                        <p class="m-0">Просування вашого сайту в пошукових системах для збільшення відвідуваності та залучення нових клієнтів. Використовуємо ефективні стратегії SEO, щоб ваш бізнес був у ТОПі пошуку</p>
+                        <a href="marketing.html" class="btn btn-lg btn-primary rounded" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
+                        <h3 class="text-white mb-3">Зв’яжіться з нами</h3>
+                        <p class="text-white mb-3">Маєте питання або хочете отримати консультацію? Ми завжди готові допомогти!</p>
+                        <!-- <h2 class="text-white mb-0">+380950580868</h2> -->
+                        <!-- <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" style="background-color: white; color: black" data-wow-delay="0.9s">Зв'язатися</a> -->
+                        <a href="#quote" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" style="background-color: white; color: black" data-wow-delay="0.9s">Зв'язатися</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Pricing Plan Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Найчастіше обирають</h5>
+                <h1 class="mb-0">Ми пропонуємо конкурентоспроможні ціни для наших клієнтів</h1>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="bg-light rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">16 Вертикальних відео</h4>
+                            <small class="text-uppercase">16 креативiв</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>699.00
+                                <!-- <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small> -->
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>Full HD або 4К відео</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Постпродакшн</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Титри та Анімація</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Актори за потреби</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <!-- <div class="d-flex justify-content-between mb-2"><span>Коти у кожному кадрi</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Фінал раптово обривається</span><i class="fa fa-times text-danger pt-1"></i></div> -->
+                            <!-- <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-times text-danger pt-1"></i></div> -->
+                            <a href="#quote" class="btn btn-primary py-2 px-4 mt-4">Замовити</a>
+                            <a href="production.html" class="btn btn-primary py-2 px-4 mt-4" style="margin-left: auto; color: black; border-width: 2px; background-color: white; border-color: rgb(6, 163, 218);">Фото та відеопослуги</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">Рекламне просування</h4>
+                            <small class="text-uppercase">Google Ads або Facebook Ads</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>569.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;"> / Місяць</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>Консультація з РК</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Конфігурація рекламних кампаній</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Оптимізація РК</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Створення рекламних матеріалів</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <!-- <div class="d-flex justify-content-between mb-2"><span>Результат залежить від фази місяця</span><i class="fa fa-times text-danger pt-1"></i></div> -->
+                            <a href="#quote" class="btn btn-primary py-2 px-4 mt-4">Замовити</a>
+                            <a href="marketing.html" class="btn btn-primary py-2 px-4 mt-4" style="margin-left: auto; color: black; border-width: 2px; background-color: white; border-color: rgb(6, 163, 218);">Послуги за маркетингу</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="bg-light rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">Розробка веб сайту</h4>
+                            <small class="text-uppercase">Для бізнесу різного розміру</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>849.00
+                                <!-- <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small> -->
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>Надаємо дизайн проект на вибір</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Робимо початкове СЕО</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <!-- <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary pt-1"></i></div> -->
+                            <!-- <div class="d-flex justify-content-between mb-2"><span>и еще 2 пункта</span><i class="fa fa-check text-primary pt-1"></i></div> -->
+                            <a href="#quote" class="btn btn-primary py-2 px-4 mt-4">Замовити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Plan End -->
+
+
+    <!-- Quote Start -->
+    <div id="quote" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">ЗАПИТ НА КОШТОРИС</h5>
+                        <h1 class="mb-0">Потрібен безкоштовний кошторис? Будь ласка, зв’яжіться з нами</h1>
+                    </div>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Відповідь протягом 24 годин</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>Цілодобова телефонна підтримка</h5>
+                        </div>
+                    </div>
+                    <!-- <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p> -->
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <!-- <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div> -->
+                        <div class="phone-form">
+                            <h5 class="mb-2" style="color: black;">Ми зв'яжемося з вами протягом 30 секунд</h5>
+                            <form id="myForm">
+                                <div class="row g-3 phone-form">
+                                    <div class="col-xl-12" style="width: 300px;">
+                                        <input type="text" name="Телeфон" class="form-control border-0" placeholder="Ваш телфон" style="width: 300px; height: 50px;">
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-light w-100 py-3" type="submit">Замовити дзвінок</button>
+                                        <button class="btn btn-dark" style="width: 300px;" type="submit">Зв’язатися</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Quote End -->
-
-        <!-- Contact Start -->
-        <div class="container-xxl py-6" id="contact">
-            <div class="container">
-                <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-5">Залиште заявку</h1>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-5">
+                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
                         <form id="myForm" class="contact-form">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <input type="text" name="name" class="form-control" placeholder="Ім'я" required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" name="email" class="form-control" placeholder="Email">
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" name="Телефон" class="form-control" placeholder="Ваш телефон *" required>
-                                </div>
-                                <!-- Скрытое для совместимости -->
-                                <input type="hidden" name="Телeфон" value="З великої форми">
-                                <div class="col-12">
-                                    <select name="Продукт" class="form-select" required>
-                                        <option selected>Оберіть послугу</option>
-                                        <option value="SMM">SMM</option>
-                                        <option value="Відео продакшн">Відео продакшн</option>
-                                        <option value="Рилсы">Рилсы</option>
-                                        <option value="Реклама">Реклама</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" class="form-control" rows="5" placeholder="Повідомлення"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Зв’язатися</button>
-                                </div>
-                            </div>
-                        </form>
+    <div class="row g-3">
+        <div class="col-12">
+            <input type="text" name="name" class="form-control" placeholder="Ім'я" required>
+        </div>
+        <div class="col-12">
+            <input type="email" name="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="col-12">
+            <input type="text" name="Телефон" class="form-control" placeholder="Ваш телефон *" required>
+        </div>
+        <div class="col-12">
+            <select name="Продукт" class="form-select" required>
+                <option selected>Оберіть послугу</option>
+                <option value="SMM">SMM</option>
+                <option value="Відео продакшн">Відео продакшн</option>
+                <option value="Рилсы">Рилсы</option>
+                <option value="Реклама">Реклама</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <textarea name="message" class="form-control" rows="5" placeholder="Повідомлення"></textarea>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary w-100 py-3" type="submit">Зв’язатися</button>
+        </div>
+    </div>
+    </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+    </div>
+    <!-- Quote End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-4 col-md-6">
-                        <h4 class="text-white mb-4">Контакти</h4>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+380 XX XXX XX XX</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@paparazzi.cam</p>
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Paparazzi</h5>
+                <h1 class="mb-0">Відгуки наших клієнтів</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                    <img class="img-fluid rounded" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" >
+                    <div class="ps-4">
+                        <h4 class="text-primary mb-1">Андрій Коваленко</h4>
+                        <small class="text-uppercase">Маркетолог IT-компанії</small>
+                    </div>   
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <h4 class="text-white mb-4">Посилання</h4>
-                        <a class="btn btn-link" href="#about">Про нас</a>
-                        <a class="btn btn-link" href="#services">Послуги</a>
-                        <a class="btn btn-link" href="#contact">Контакти</a>
+                    <div class="pt-4 pb-5 px-5">
+                        Завдяки їхній команді наша реклама в TikTok та Instagram почала приносити реальні продажі. Чітка аналітика, якісний монтаж відео та продумана стратегія. Дуже задоволений результатами!
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Марина Левченко</h4>
+                            <small class="text-uppercase">Власник бренду одягу</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Зверталися для просування нашого YouTube-каналу. Контент став якіснішим, зріс рівень залучення, а головне – більше заявок від клієнтів! Рекомендую!
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Олександр Гринчук</h4>
+                            <small class="text-uppercase">Власник агенції нерухомості</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Сумнівався, чи допоможе контент-маркетинг залучити клієнтів у нашу сферу. Але вони змогли! Відео та огляди працюють чудово, а реклама дає реальні ліди
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="img/testimonial-4.jpg" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Софія Мельник</h4>
+                            <small class="text-uppercase">Власниця кав’ярні</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Хотіла залучити більше клієнтів через соцмережі. Ця команда створила для мене чарівний контент – відео з наших напоїв і відгуки завірусилися! Тепер у нас аншлаги на вихідних. Дуже рада співпраці!
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Paparazzi.cam</a>, Всі права захищені.
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Team Start -->
+    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Team Members</h5>
+                <h1 class="mb-0">Professional Stuffs Ready to Help Your Business</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Full Name</h4>
+                            <p class="text-uppercase m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Full Name</h4>
+                            <p class="text-uppercase m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Full Name</h4>
+                            <p class="text-uppercase m-0">Designation</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </div> -->
+    <!-- Team End -->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Blog Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Наш Блог</h5>
+                <h1 class="mb-0">Перш ніж почати співпрацю – прочитайте це</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="blog-item bg-light rounded overflow-hidden">
+                        <div class="blog-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/blog-1.jpg" alt="">
+                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4">Youtube</a>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex mb-3">
+                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                            </div>
+                            <h4 class="mb-3">Що дає YouTube бізнесу</h4>
+                            <p>YouTube — це не просто розвага. Це платформа, яка продає, переконує і будує бренд.</p>
+                            <a href="youtube-blog.html" class="text-uppercase">Читати <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="blog-item bg-light rounded overflow-hidden">
+                        <div class="blog-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/blog-2.jpg" alt="">
+                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4">Просування</a>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex mb-3">
+                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                            </div>
+                            <h4 class="mb-3">У чому різниця між платформами для бізнесу</h4>
+                            <p>Правильний вибір платформи = ефективний контент + потрібна аудиторія. І ми знаємо, як адаптувати відео для кожної з них</p>
+                            <a href="business-platform-blog.html" class="text-uppercase">Читати <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="blog-item bg-light rounded overflow-hidden">
+                        <div class="blog-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/blog-3.jpg" alt="">
+                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Реклама</a>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex mb-3">
+                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                            </div>
+                            <h4 class="mb-3">🚀 Ефективні методи просування в соцмережах</h4>
+                            <p>Просування — це не хаотичне полювання за охопленнями. Це стратегія, у якій кожне відео працює на вашу мету</p>
+                            <a href="social-methods-blog.html" class="text-uppercase">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Blog Start -->
+
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 mb-5">
+            <div class="bg-white">
+                <div class="owl-carousel vendor-carousel">
+                    <img src="img/vendor-1.jpg" alt="">
+                    <img src="img/vendor-2.jpg" alt="">
+                    <img src="img/vendor-3.jpg" alt="">
+                    <img src="img/vendor-4.jpg" alt="">
+                    <img src="img/vendor-5.jpg" alt="">
+                    <img src="img/vendor-6.jpg" alt="">
+                    <img src="img/vendor-7.jpg" alt="">
+                    <img src="img/vendor-8.jpg" alt="">
+                    <img src="img/vendor-9.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+    
+
+ <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Paparazzi</h1>
+                        </a>
+                        <p class="mt-3 mb-4">Залишайте заявку на консультацію</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <button class="btn btn-dark">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Зв'яжіться з нами</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Kyiv, Ukraine</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">OlehYevdokimov@outlook.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+38 095 058 0868</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Перехід</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Головна</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Про нас</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Послуги</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Команда</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Зв'язок</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Популярні</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Головна</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Про нас</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Послуги</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Команда</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Зв'язок</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Paparazzi</a>. All Rights Reserved. 
+						
+						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+					
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -274,60 +860,69 @@
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <!-- Telegram Forms Script -->
+    <!-- Firebase -->
     <script>
-        const form = document.getElementById('myForm');
-        const formPhone = document.querySelector('.phone-form form');
+    const form = document.getElementById('myForm');
+    const formPhone = document.querySelector('.phone-form form'); // Маленькая форма
 
-        const TELEGRAM_TOKEN = '8251382336:AAFvbnhvQ1ZrbKX8hz2xyPbjwJ7MWHDEV2Q'; // ТВОЙ СВЕЖИЙ ТОКЕН
-        const TELEGRAM_CHAT_ID = '-1003450381746'; // Твой канал
+    const TELEGRAM_TOKEN = '8251382336:AAFvbnhvQ1ZrbKX8hz2xyPbjwJ7MWHDEV2Q'; // ТВОЙ СВЕЖИЙ ТОКЕН
+    const TELEGRAM_CHAT_ID = '-1003450381746'; // Твой канал Leads_paparazzi_cam
 
-        // Отправка через fetch GET с mode:'no-cors' — запрос будет инициирован из браузера,
-        // ответа прочитать нельзя, но сообщение обычно доставляется в Telegram.
-        async function sendToTelegram(message) {
-            const text = encodeURIComponent(message);
-            const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${text}&parse_mode=HTML&_=${Date.now()}`;
-            try {
-                await fetch(url, { method: 'GET', mode: 'no-cors', cache: 'no-store' });
+    async function sendToTelegram(message) {
+        try {
+            const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message, parse_mode: 'HTML' })
+            });
+            if (response.ok) {
                 alert('Дякую! Ми зв’яжемося з вами протягом 30 секунд 🚀');
                 form?.reset();
                 formPhone?.reset();
-            } catch (err) {
-                alert('Помилка: ' + err.message);
+            } else {
+                alert('Щось пішло не так... Спробуй ще раз');
             }
+        } catch (err) {
+            alert('Помилка мережі. Перевір інтернет');
         }
+    }
 
-        if (form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const data = new FormData(form);
-                let phone = data.get('Телефон') || data.get('Телeфон') || 'Не вказано';
-                let text = '<b>🔥 НОВА ЗАЯВКА З ВЕЛИКОЇ ФОРМИ paparazzi.cam</b>\n\n';
-                text += `📱 Номер: <b>${phone}</b>\n`;
-                text += `👤 Ім’я: <b>${data.get('name') || 'Не вказано'}</b>\n`;
-                text += `✉️ Email: <b>${data.get('email') || 'Не вказано'}</b>\n`;
-                text += `🛒 Послуга: <b>${data.get('Продукт') || 'Не вказано'}</b>\n`;
-                text += `💬 Повідомлення: ${data.get('message') || 'Пусто'}\n`;
-                text += `\n🕐 Час: ${new Date().toLocaleString('uk-UA')}`;
-                sendToTelegram(text);
+    // Большая форма
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+            let text = '<b>🔥 НОВА ЗАЯВКА З САЙТУ paparazzi.cam (велика форма)</b>\n\n';
+            data.forEach((value, key) => {
+                if (key === 'Телефон') text += `📱 Номер: <b>${value}</b>\n`;
+                else if (key === 'name') text += `👤 Ім’я: <b>${value}</b>\n`;
+                else if (key === 'email') text += `✉️ Email: <b>${value}</b>\n`;
+                else if (key === 'Продукт') text += `🛒 Послуга: <b>${value}</b>\n`;
+                else if (key === 'message') text += `💬 Повідомлення: ${value}\n`;
             });
-        }
+            text += `\n🕐 Час: ${new Date().toLocaleString('uk-UA')}`;
+            sendToTelegram(text);
+        });
+    }
 
-        if (formPhone) {
-            formPhone.addEventListener('submit', (e) => {
-                e.preventDefault();
-                let phone = 'Не вказано';
-                const input = formPhone.querySelector('input[name="Телeфон"]') || formPhone.querySelector('input[name="Телефон"]');
-                if (input) phone = input.value;
-                const text = `<b>⚡ ШВИДКА ЗАЯВКА!</b>\n\n📱 Номер: <b>${phone}</b>\n🕐 Час: ${new Date().toLocaleString('uk-UA')}\n🌐 Сайт: paparazzi.cam`;
-                sendToTelegram(text);
-            });
-        }
-    </script>
+    // Маленькая форма (поддержка обоих вариантов Телeфон/Телефон)
+    if (formPhone) {
+        formPhone.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const phone = formPhone.querySelector('input[name="Телeфон"]')?.value || 
+                         formPhone.querySelector('input[name="Телефон"]')?.value || 'Не вказано';
+            const text = `<b>⚡ ШВИДКА ЗАЯВКА!</b>\n\n📱 Номер: <b>${phone}</b>\n🕐 Час: ${new Date().toLocaleString('uk-UA')}\n🌐 Сайт: paparazzi.cam`;
+            sendToTelegram(text);
+        });
+    }
+</script>
+
 </body>
+
 </html>
