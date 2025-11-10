@@ -868,59 +868,58 @@
 
     <!-- Firebase -->
     <script>
-    const form = document.getElementById('myForm');
-    const formPhone = document.querySelector('.phone-form form'); // Маленькая форма
+    
+(function () {
+  const form = document.getElementById('myForm');
 
-    const TELEGRAM_TOKEN = '8251382336:AAFvbnhvQ1ZrbKX8hz2xyPbjwJ7MWHDEV2Q'; // ТВОЙ СВЕЖИЙ ТОКЕН
-    const TELEGRAM_CHAT_ID = '-1003450381746'; // Твой канал Leads_paparazzi_cam
+  // Ваш токен и chat_id (оставил ваши значения)
+  const TELEGRAM_TOKEN = '8251382336:AAFvbnhvQ1ZrbKX8hz2xyPbjwJ7MWHDEV2Q';
+  const TELEGRAM_CHAT_ID = '-1003450381746';
 
-    async function sendToTelegram(message) {
-        try {
-            const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message, parse_mode: 'HTML' })
-            });
-            if (response.ok) {
-                alert('Дякую! Ми зв’яжемося з вами протягом 30 секунд 🚀');
-                form?.reset();
-                formPhone?.reset();
-            } else {
-                alert('Щось пішло не так... Спробуй ще раз');
-            }
-        } catch (err) {
-            alert('Помилка мережі. Перевір інтернет');
-        }
+  async function sendToTelegramNoCors(message) {
+    const text = encodeURIComponent(message);
+    const url =
+      `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage` +
+      `?chat_id=${TELEGRAM_CHAT_ID}&text=${text}&parse_mode=HTML&_=${Date.now()}`;
+
+    try {
+      // Запрос будет инициирован, но ответ прочитать нельзя (opaque)
+      await fetch(url, { method: 'GET', mode: 'no-cors', cache: 'no-store' });
+      alert('Дякую! Ми зв’яжемося з вами протягом 30 секунд 🚀');
+      if (form) form.reset();
+    } catch (err) {
+      // На практике при no-cors catch редко срабатывает, но оставляем обработку
+      alert('Помилка мережі: ' + err.message);
     }
+  }
 
-    // Большая форма
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const data = new FormData(form);
-            let text = '<b>🔥 НОВА ЗАЯВКА З САЙТУ paparazzi.cam (велика форма)</b>\n\n';
-            data.forEach((value, key) => {
-                if (key === 'Телефон') text += `📱 Номер: <b>${value}</b>\n`;
-                else if (key === 'name') text += `👤 Ім’я: <b>${value}</b>\n`;
-                else if (key === 'email') text += `✉️ Email: <b>${value}</b>\n`;
-                else if (key === 'Продукт') text += `🛒 Послуга: <b>${value}</b>\n`;
-                else if (key === 'message') text += `💬 Повідомлення: ${value}\n`;
-            });
-            text += `\n🕐 Час: ${new Date().toLocaleString('uk-UA')}`;
-            sendToTelegram(text);
-        });
-    }
+  if (!form) return;
 
-    // Маленькая форма (поддержка обоих вариантов Телeфон/Телефон)
-    if (formPhone) {
-        formPhone.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const phone = formPhone.querySelector('input[name="Телeфон"]')?.value || 
-                         formPhone.querySelector('input[name="Телефон"]')?.value || 'Не вказано';
-            const text = `<b>⚡ ШВИДКА ЗАЯВКА!</b>\n\n📱 Номер: <b>${phone}</b>\n🕐 Час: ${new Date().toLocaleString('uk-UA')}\n🌐 Сайт: paparazzi.cam`;
-            sendToTelegram(text);
-        });
-    }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    // Поддерживаем ваши имена полей на кириллице и скрытое поле
+    const phone = data.get('Телефон') || data.get('Телeфон') || 'Не вказано';
+    const name = data.get('name') || 'Не вказано';
+    const email = data.get('email') || 'Не вказано';
+    const product = data.get('Продукт') || 'Не вказано';
+    const messageField = data.get('message') || 'Пусто';
+
+    // Сформируем компактный текст — избегайте слишком длинных сообщений (ограничение URL)
+    let text = '<b>🔥 НОВА ЗАЯВКА З ВЕЛИКОЇ ФОРМИ paparazzi.cam</b>\n\n';
+    text += `📱 Номер: <b>${phone}</b>\n`;
+    text += `👤 Ім’я: <b>${name}</b>\n`;
+    text += `✉️ Email: <b>${email}</b>\n`;
+    text += `🛒 Послуга: <b>${product}</b>\n`;
+    // Убираем лишние переносы в поле сообщения, чтобы не раздувать URL
+    const trimmedMessage = String(messageField).trim().replace(/\s{2,}/g, ' ').slice(0, 800);
+    text += `💬 Повідомлення: ${trimmedMessage || 'Пусто'}\n`;
+    text += `\n🕐 Час: ${new Date().toLocaleString('uk-UA')}`;
+
+    sendToTelegramNoCors(text);
+  });
+})();
 </script>
 
 </body>
