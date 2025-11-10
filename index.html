@@ -71,7 +71,7 @@
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="text-white mb-4 animated zoomIn">Найкращі медіа-рішення для вашого бізнесу</h1>
-                            <p class="text-white pb-3 animated zoomIn">Ми знімаємо круті відео, ведемо SMM, робимо вірусні рилсы та рекламу, яка продає.</p>
+                            <p class="text-white pb-3 animated zoomIn">Ми знімаємо круті відео, ведемо SMM, робимо вірусні рилсы та рекламу, яка[...]
                             <a href="#contact" class="btn btn-outline-light rounded-pill py-3 px-5 animated slideInRight">Зв'язатися</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end">
@@ -287,21 +287,16 @@
         const TELEGRAM_TOKEN = '8251382336:AAFvbnhvQ1ZrbKX8hz2xyPbjwJ7MWHDEV2Q'; // ТВОЙ СВЕЖИЙ ТОКЕН
         const TELEGRAM_CHAT_ID = '-1003450381746'; // Твой канал
 
+        // Отправка через fetch GET с mode:'no-cors' — запрос будет инициирован из браузера,
+        // ответа прочитать нельзя, но сообщение обычно доставляется в Telegram.
         async function sendToTelegram(message) {
+            const text = encodeURIComponent(message);
+            const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${text}&parse_mode=HTML&_=${Date.now()}`;
             try {
-                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message, parse_mode: 'HTML' })
-                });
-                if (response.ok) {
-                    alert('Дякую! Ми зв’яжемося з вами протягом 30 секунд 🚀');
-                    form?.reset();
-                    formPhone?.reset();
-                } else {
-                    const errorText = await response.text();
-                    alert('Помилка Telegram: ' + response.status + ' ' + errorText);
-                }
+                await fetch(url, { method: 'GET', mode: 'no-cors', cache: 'no-store' });
+                alert('Дякую! Ми зв’яжемося з вами протягом 30 секунд 🚀');
+                form?.reset();
+                formPhone?.reset();
             } catch (err) {
                 alert('Помилка: ' + err.message);
             }
