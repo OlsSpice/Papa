@@ -287,45 +287,53 @@
                         </div> -->
                         <div class="phone-form">
                             <h5 class="mb-2" style="color: black;">Ми зв'яжемося з вами протягом 30 секунд</h5>
-                            <form id="myForm">
-                                <div class="row g-3 phone-form">
-                                    <div class="col-xl-12" style="width: 300px;">
-                                        <input type="text" name="Телефон" class="form-control border-0" placeholder="Ваш телефон" style="width: 300px; height: 50px;">
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-dark" style="width: 300px;" type="submit">Зв’язатися</button>
-                                    </div>
-                                </div>
-                            </form>
+                      <form id="phoneForm">
+                           <div class="row g-3 phone-form">
+                          <div class="col-xl-12" style="width: 300px;">
+                          <input type="text" name="Телефон" class="form-control border-0" placeholder="Ваш телефон" style="width: 300px; height: 50px;">
+                 </div>
+                       <div class="col-12">
+                         <button class="btn btn-dark" style="width: 300px;" type="submit">Зв’язатися</button>
+                      </div>
+                     </div>
+                 </form>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form id="myForm">
-                            <div class="row g-3">
-                                <div class="col-xl-12">
-                                    <input type="text" name="name" class="form-control bg-light border-0" placeholder="Ім'я" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;" name="Продукт">
-                                        <option selected>Оберiть послугу</option>
-                                        <option value="1">Консультація</option>
-                                        <option value="2">Продакшн</option>
-                                        <option value="3">Маркетинг</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="ПовIдомлення"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Зв’язатися</button>
-                                </div>
-                            </div>
-                        </form>
+                       <!-- NEW: большая форма с полем телефона и уникальным id -->
+<form id="bigForm">
+  <div class="row g-3">
+    <div class="col-xl-12">
+      <input type="text" name="name" class="form-control bg-light border-0" placeholder="Ім'я" style="height: 55px;">
+    </div>
+    <div class="col-12">
+      <input type="email" name="email" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;">
+    </div>
+
+    <!-- Добавлено поле телефона в большой форме -->
+    <div class="col-12">
+      <input type="text" name="Телефон" class="form-control bg-light border-0" placeholder="Ваш телефон" style="height: 55px;">
+    </div>
+
+    <div class="col-12">
+      <select class="form-select bg-light border-0" style="height: 55px;" name="Продукт">
+        <option selected>Оберiть послугу</option>
+        <option value="1">Консультація</option>
+        <option value="2">Продакшн</option>
+        <option value="3">Маркетинг</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="ПовIдомлення"></textarea>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-dark w-100 py-3" type="submit">Зв’язатися</button>
+    </div>
+  </div>
+</form>
                     </div>
                 </div>
             </div>
@@ -462,45 +470,25 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script type="module">
-        // Firebase libs
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-        import { getFirestore, doc, addDoc, collection } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyAp8sgI6naW7nYmtoAQdKEM-Aam2_kE17M",
-          authDomain: "action-agency-site.firebaseapp.com",
-          projectId: "action-agency-site",
-          storageBucket: "action-agency-site.firebasestorage.app",
-          messagingSenderId: "110185184995",
-          appId: "1:110185184995:web:6ce62c424eca31404ecfd6"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        const coll = collection(db, "site_forms");
+<script type="module">
+  // ... инициализация Firebase как было выше ...
 
-        // Firebase Form
-        const form = document.getElementById('myForm');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-            console.log(formData);
-            let data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-
-            try {
-                await addDoc(coll, data);
-            } catch (error) {
-                console.error('Firebase error:', error);
-            }
-        });
-    </script>    
+  // Привязка Firebase только к phoneForm
+  const form = document.getElementById('phoneForm');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      let data = {};
+      formData.forEach((value, key) => { data[key] = value; });
+      try {
+        await addDoc(coll, data);
+      } catch (error) {
+        console.error('Firebase error:', error);
+      }
+    });
+  }
+</script>
 
 	<!-- Старый inline-скрипт удалён потому что используется внешний js/telegram-forms.js -->
   <script src="js/telegram-forms.js"></script>
