@@ -867,60 +867,6 @@
     <script src="js/main.js"></script>
 
     <!-- Firebase -->
-    <script>
-    
-(function () {
-  const form = document.getElementById('myForm');
-
-  // Ваш токен и chat_id (оставил ваши значения)
-  const TELEGRAM_TOKEN = '8251382336:AAFvbnhvQ1ZrbKX8hz2xyPbjwJ7MWHDEV2Q';
-  const TELEGRAM_CHAT_ID = '-1003450381746';
-
-  async function sendToTelegramNoCors(message) {
-    const text = encodeURIComponent(message);
-    const url =
-      `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage` +
-      `?chat_id=${TELEGRAM_CHAT_ID}&text=${text}&parse_mode=HTML&_=${Date.now()}`;
-
-    try {
-      // Запрос будет инициирован, но ответ прочитать нельзя (opaque)
-      await fetch(url, { method: 'GET', mode: 'no-cors', cache: 'no-store' });
-      alert('Дякую! Ми зв’яжемося з вами протягом 30 секунд 🚀');
-      if (form) form.reset();
-    } catch (err) {
-      // На практике при no-cors catch редко срабатывает, но оставляем обработку
-      alert('Помилка мережі: ' + err.message);
-    }
-  }
-
-  if (!form) return;
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const data = new FormData(form);
-    // Поддерживаем ваши имена полей на кириллице и скрытое поле
-    const phone = data.get('Телефон') || data.get('Телeфон') || 'Не вказано';
-    const name = data.get('name') || 'Не вказано';
-    const email = data.get('email') || 'Не вказано';
-    const product = data.get('Продукт') || 'Не вказано';
-    const messageField = data.get('message') || 'Пусто';
-
-    // Сформируем компактный текст — избегайте слишком длинных сообщений (ограничение URL)
-    let text = '<b>🔥 НОВА ЗАЯВКА З ВЕЛИКОЇ ФОРМИ paparazzi.cam</b>\n\n';
-    text += `📱 Номер: <b>${phone}</b>\n`;
-    text += `👤 Ім’я: <b>${name}</b>\n`;
-    text += `✉️ Email: <b>${email}</b>\n`;
-    text += `🛒 Послуга: <b>${product}</b>\n`;
-    // Убираем лишние переносы в поле сообщения, чтобы не раздувать URL
-    const trimmedMessage = String(messageField).trim().replace(/\s{2,}/g, ' ').slice(0, 800);
-    text += `💬 Повідомлення: ${trimmedMessage || 'Пусто'}\n`;
-    text += `\n🕐 Час: ${new Date().toLocaleString('uk-UA')}`;
-
-    sendToTelegramNoCors(text);
-  });
-})();
-</script>
 	
    <script src="js/telegram-forms.js"></script>
 
