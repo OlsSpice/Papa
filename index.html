@@ -510,33 +510,34 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form id="myForm">
-                            <div class="row g-3">
-                                <div class="col-xl-12">
-                                    <input type="text" name="name" class="form-control bg-light border-0" placeholder="Ім'я" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;">
-                                </div>
-                                        <div class="col-12">
-                                     <input type="text" name="Телeфон" class="form-control" placeholder="Ваш телефон *" required>
-                                 </div>
-                                <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;" name="Продукт">
-                                        <option selected>Оберiть послугу</option>
-                                        <option value="1">Консультація</option>
-                                        <option value="2">Продакшн</option>
-                                        <option value="3">Маркетинг</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="ПовIдомлення"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Зв’язатися</button>
-                                </div>
-                            </div>
-                        </form>
+                        <form id="myForm" class="contact-form">
+    <div class="row g-3">
+        <div class="col-12">
+            <input type="text" name="name" class="form-control" placeholder="Ім'я" required>
+        </div>
+        <div class="col-12">
+            <input type="email" name="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="col-12">
+            <input type="text" name="Телефон" class="form-control" placeholder="Ваш телефон *" required>
+        </div>
+        <div class="col-12">
+            <select name="Продукт" class="form-select" required>
+                <option selected>Оберіть послугу</option>
+                <option value="SMM">SMM</option>
+                <option value="Відео продакшн">Відео продакшн</option>
+                <option value="Рилсы">Рилсы</option>
+                <option value="Реклама">Реклама</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <textarea name="message" class="form-control" rows="5" placeholder="Повідомлення"></textarea>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary w-100 py-3" type="submit">Зв’язатися</button>
+        </div>
+    </div>
+    </form>
                     </div>
                 </div>
             </div>
@@ -868,10 +869,10 @@
     <!-- Firebase -->
     <script>
     const form = document.getElementById('myForm');
-    const formPhone = document.querySelector('.phone-form form'); // Маленькая форма с номером
+    const formPhone = document.querySelector('.phone-form form'); // Маленькая форма
 
-    const TELEGRAM_TOKEN = '8251382336:AAFvbnhvQ1ZrbKX8hz2xyPbjwJ7MWHDEV2Q'; // Твой токен
-    const TELEGRAM_CHAT_ID = '-1003450381746'; // ID твоего канала Leads_paparazzi_cam
+    const TELEGRAM_TOKEN = '8251382336:AAFvbnhvQ1ZrbKX8hz2xyPbjwJ7MWHDEV2Q'; // ТВОЙ СВЕЖИЙ ТОКЕН
+    const TELEGRAM_CHAT_ID = '-1003450381746'; // Твой канал Leads_paparazzi_cam
 
     async function sendToTelegram(message) {
         try {
@@ -882,8 +883,8 @@
             });
             if (response.ok) {
                 alert('Дякую! Ми зв’яжемося з вами протягом 30 секунд 🚀');
-                form.reset();
-                if (formPhone) formPhone.reset();
+                form?.reset();
+                formPhone?.reset();
             } else {
                 alert('Щось пішло не так... Спробуй ще раз');
             }
@@ -897,9 +898,9 @@
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const data = new FormData(form);
-            let text = '<b>🔥 НОВА ЗАЯВКА З САЙТУ paparazzi.cam</b>\n\n';
+            let text = '<b>🔥 НОВА ЗАЯВКА З САЙТУ paparazzi.cam (велика форма)</b>\n\n';
             data.forEach((value, key) => {
-                if (key === 'Телeфон') text += `📱 Номер: <b>${value}</b>\n`;
+                if (key === 'Телефон') text += `📱 Номер: <b>${value}</b>\n`;
                 else if (key === 'name') text += `👤 Ім’я: <b>${value}</b>\n`;
                 else if (key === 'email') text += `✉️ Email: <b>${value}</b>\n`;
                 else if (key === 'Продукт') text += `🛒 Послуга: <b>${value}</b>\n`;
@@ -910,11 +911,12 @@
         });
     }
 
-    // Маленькая форма с номером (в секции Quote)
+    // Маленькая форма (поддержка обоих вариантов Телeфон/Телефон)
     if (formPhone) {
         formPhone.addEventListener('submit', (e) => {
             e.preventDefault();
-            const phone = formPhone.querySelector('input[name="Телeфон"]')?.value || 'Не вказано';
+            const phone = formPhone.querySelector('input[name="Телeфон"]')?.value || 
+                         formPhone.querySelector('input[name="Телефон"]')?.value || 'Не вказано';
             const text = `<b>⚡ ШВИДКА ЗАЯВКА!</b>\n\n📱 Номер: <b>${phone}</b>\n🕐 Час: ${new Date().toLocaleString('uk-UA')}\n🌐 Сайт: paparazzi.cam`;
             sendToTelegram(text);
         });
