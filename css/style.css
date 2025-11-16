@@ -555,52 +555,55 @@ strong {
     color: #2c3e50;
 }
 /* АНИМАЦИЯ КАРТОЧЕК — ТОЧНО КАК НА хрен*/
-.case-item {
+/* РАБОЧАЯ АНИМАЦИЯ ДЛЯ paparazzi.cam/cases.html — НОЯБРЬ 2025 */
+.case-card {
     position: relative;
     overflow: hidden;
-    border-radius: 12px;           /* как у тебя уже есть */
-    transition: all 0.4s ease;
+    border-radius: 16px !important;     /* у тебя уже есть, но на всякий */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: pointer;
+    height: 100%;
 }
 
-.case-item img {
+.case-card img {
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: scale(1);
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: block;
 }
 
-/* Тёмный оверлей при наведении */
-.case-item::before {
+/* Тёмный оверлей */
+.case-card::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0);
-    transition: background 0.4s ease;
+    background: rgba(0,0,0,0);
+    transition: background 0.45s ease;
     z-index: 1;
     pointer-events: none;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
-/* Эффекты при наведении */
-.case-item:hover::before {
-    background: rgba(0, 0, 0, 0.28);        /* точно как на museway */
+/* При наведении */
+.case-card:hover::before {
+    background: rgba(0,0,0,0.3);   /* точно как на museway */
 }
 
-.case-item:hover img {
-    transform: scale(1.08);                 /* увеличение картинки */
+.case-card:hover img {
+    transform: scale(1.09);        /* красивое увеличение */
 }
 
-.case-item:hover {
-    transform: translateY(-10px);           /* карточка слегка поднимается */
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+.case-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
 }
 
-/* Опционально: текст становится ярче (если хочешь) */
-.case-item:hover .case-title,
-.case-item:hover .case-subtitle,
-.case-item:hover .case-year {
-    color: #ffffff !important;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+/* Текст становится белее и с тенью (по желанию — можно убрать) */
+.case-card:hover .case-title,
+.case-card:hover .case-category,
+.case-card:hover .case-year {
+    color: #fff !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
 }
