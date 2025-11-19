@@ -161,64 +161,59 @@
         <!-- ПЕРВАЯ ТРОЙКА -->
         <div class="row g-4 justify-content-center mb-5">
 
-<!-- 1. Фото/відео оператор -->
+<!-- 1. Фото/відео оператор → теперь красиво и чётко -->
 <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.6s">
     <div class="bg-light rounded h-100 d-flex flex-column">
         <div class="border-bottom py-4 px-5 mb-4">
-            <div class="position-relative rounded-4 overflow-hidden shadow mb-4" style="aspect-ratio: 16/9; cursor: pointer;">
-                <img src="https://img.youtube.com/vi/9fHh1ArOv2E/maxresdefault.jpg" 
-                     onerror="this.src='https://img.youtube.com/vi/9fHh1ArOv2E/hqdefault.jpg'"
-                     class="w-100 h-100" style="object-fit: cover; transition: transform .4s;"
-                     alt="Фото або відеоператор">
-
-                <div class="position-absolute top-50 start-50 translate-middle">
-                    <div class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center" 
-                         style="width: 80px; height: 80px; opacity: 0.9;">
-                        <i class="fa fa-play text-primary fs-3 ms-2"></i>
-                    </div>
-                </div>
-
-                <!-- Вот эта строчка — магия: видео откроется в лайтбоксе на твоей странице -->
-                <a data-fancybox="gallery" 
-                   href="https://www.youtube.com/watch?v=9fHh1ArOv2E"
-                   class="position-absolute top-0 start-0 w-100 h-100"></a>
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4">
+                <iframe src="https://www.youtube.com/embed/9fHh1ArOv2E?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0" 
+                        title="Фото або відеоператор" 
+                        allowfullscreen 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        class="border-0 rounded-4">
+                </iframe>
             </div>
-
             <h4 class="text-primary mb-1">Фото або відеоператор</h4>
             <small class="text-uppercase">Під вашу задачу</small>
         </div>
-        <!-- остальной контент карточки без изменений -->
-        ...
+        <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+            <h1 class="display-5 mb-4">
+                <small class="align-top" style="font-size: 22px; line-height: 45px;">₴</small>2500
+                <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Година</small>
+            </h1>
+            <div class="d-flex justify-content-between mb-3"><span>Зйомка 4к або FHD</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <a href="#quote" class="btn btn-primary py-2 px-4 mt-auto w-100">Замовити</a>
+        </div>
     </div>
 </div>
-			
-		<!-- 2. Youtube продакшн (та же магия) -->
+
+<!-- 2. Youtube продакшн → тоже теперь идеально -->
 <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.9s">
     <div class="bg-white rounded shadow position-relative h-100 d-flex flex-column" style="z-index: 1;">
         <div class="border-bottom py-4 px-5 mb-4">
-            <div class="position-relative rounded-4 overflow-hidden shadow mb-4" style="aspect-ratio: 16/9; cursor: pointer;">
-                <img src="https://img.youtube.com/vi/qsoROk0mNZw/maxresdefault.jpg" 
-                     onerror="this.src='https://img.youtube.com/vi/qsoROk0mNZw/hqdefault.jpg'"
-                     class="w-100 h-100" style="object-fit: cover; transition: transform .4s;"
-                     alt="Youtube продакшн">
-
-                <div class="position-absolute top-50 start-50 translate-middle">
-                    <div class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center" 
-                         style="width: 90px; height: 90px; opacity: 0.95;">
-                        <i class="fa fa-play text-primary fs-2 ms-2"></i>
-                    </div>
-                </div>
-
-                <a data-fancybox="gallery" 
-                   href="https://www.youtube.com/watch?v=qsoROk0mNZw"
-                   class="position-absolute top-0 start-0 w-100 h-100"></a>
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4">
+                <iframe src="https://www.youtube.com/embed/qsoROk0mNZw?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0" 
+                        title="Youtube продакшн" 
+                        allowfullscreen 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        class="border-0 rounded-4">
+                </iframe>
             </div>
-
             <h4 class="text-primary mb-1">Youtube продакшн</h4>
             <small class="text-uppercase">4 відео у місяць</small>
         </div>
-        <!-- остальной контент без изменений -->
-        ...
+        <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+            <h1 class="display-5 mb-4">
+                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>1200
+                <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Місяць</small>
+            </h1>
+            <div class="d-flex justify-content-between mb-3"><span>Обкладинки</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <div class="d-flex justify-content-between mb-3"><span>Сценарій</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <div class="d-flex justify-content-between mb-3"><span>Монтаж</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <div class="d-flex justify-content-between mb-3"><span>Iнфографіка</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <div class="d-flex justify-content-between mb-3"><span>Титри</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <a href="#quote" class="btn btn-primary py-2 px-4 mt-auto w-100">Замовити</a>
+        </div>
     </div>
 </div>
 			
