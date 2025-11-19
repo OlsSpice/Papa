@@ -161,17 +161,28 @@
         <!-- ПЕРВАЯ ТРОЙКА -->
         <div class="row g-4 justify-content-center mb-5">
 
-<!-- 1. Фото/відео оператор — чёткое превью + видео на месте -->
+<!-- 1. Фото/відео оператор — с чётким превью + кнопка Play -->
 <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.6s">
     <div class="bg-light rounded h-100 d-flex flex-column">
         <div class="border-bottom py-4 px-5 mb-4">
-            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview" 
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview position-relative"
                  style="background-image: url('https://img.youtube.com/vi/9fHh1ArOv2E/maxresdefault.jpg'); background-size: cover; background-position: center; cursor: pointer;">
-                <iframe class="lazy-iframe" data-src="https://www.youtube.com/embed/9fHh1ArOv2E?rel=0&modestbranding=1&autoplay=1" 
+                 
+                <!-- Кнопка Play -->
+                <div class="position-absolute top-50 start-50 translate-middle z-3">
+                    <div class="bg-white rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                        <i class="fa fa-play text-primary fs-3 ms-2"></i>
+                    </div>
+                </div>
+
+                <!-- Ленивый iframe -->
+                <iframe class="lazy-iframe position-absolute top-0 start-0 w-100 h-100 border-0 rounded-4" 
+                        data-src="https://www.youtube.com/embed/9fHh1ArOv2E?rel=0&modestbranding=1&autoplay=1" 
                         title="Фото або відеоператор" 
                         allowfullscreen allow="autoplay; encrypted-media"
                         frameborder="0" style="display:none;"></iframe>
             </div>
+
             <h4 class="text-primary mb-1">Фото або відеоператор</h4>
             <small class="text-uppercase">Під вашу задачу</small>
         </div>
@@ -186,17 +197,27 @@
     </div>
 </div>
 
-<!-- 2. Youtube продакшн — то же самое, ещё чётче -->
+<!-- 2. Youtube продакшн — тоже с кнопкой Play (чуть больше, потому что карточка главная) -->
 <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.9s">
     <div class="bg-white rounded shadow position-relative h-100 d-flex flex-column" style="z-index: 1;">
         <div class="border-bottom py-4 px-5 mb-4">
-            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview" 
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview position-relative"
                  style="background-image: url('https://img.youtube.com/vi/qsoROk0mNZw/maxresdefault.jpg'); background-size: cover; background-position: center; cursor: pointer;">
-                <iframe class="lazy-iframe" data-src="https://www.youtube.com/embed/qsoROk0mNZw?rel=0&modestbranding=1&autoplay=1" 
+                 
+                <!-- Кнопка Play побольше -->
+                <div class="position-absolute top-50 start-50 translate-middle z-3">
+                    <div class="bg-white rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 90px; height: 90px;">
+                        <i class="fa fa-play text-primary fs-2 ms-2"></i>
+                    </div>
+                </div>
+
+                <iframe class="lazy-iframe position-absolute top-0 start-0 w-100 h-100 border-0 rounded-4" 
+                        data-src="https://www.youtube.com/embed/qsoROk0mNZw?rel=0&modestbranding=1&autoplay=1" 
                         title="Youtube продакшн" 
                         allowfullscreen allow="autoplay; encrypted-media"
                         frameborder="0" style="display:none;"></iframe>
             </div>
+
             <h4 class="text-primary mb-1">Youtube продакшн</h4>
             <small class="text-uppercase">4 відео у місяць</small>
         </div>
