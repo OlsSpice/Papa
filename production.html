@@ -161,17 +161,16 @@
         <!-- ПЕРВАЯ ТРОЙКА -->
         <div class="row g-4 justify-content-center mb-5">
 
-<!-- 1. Фото/відео оператор → теперь красиво и чётко -->
+<!-- 1. Фото/відео оператор — чёткое превью + видео на месте -->
 <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.6s">
     <div class="bg-light rounded h-100 d-flex flex-column">
         <div class="border-bottom py-4 px-5 mb-4">
-            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4">
-                <iframe src="https://www.youtube.com/embed/9fHh1ArOv2E?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0" 
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview" 
+                 style="background-image: url('https://img.youtube.com/vi/9fHh1ArOv2E/maxresdefault.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                <iframe class="lazy-iframe" data-src="https://www.youtube.com/embed/9fHh1ArOv2E?rel=0&modestbranding=1&autoplay=1" 
                         title="Фото або відеоператор" 
-                        allowfullscreen 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        class="border-0 rounded-4">
-                </iframe>
+                        allowfullscreen allow="autoplay; encrypted-media"
+                        frameborder="0" style="display:none;"></iframe>
             </div>
             <h4 class="text-primary mb-1">Фото або відеоператор</h4>
             <small class="text-uppercase">Під вашу задачу</small>
@@ -187,17 +186,16 @@
     </div>
 </div>
 
-<!-- 2. Youtube продакшн → тоже теперь идеально -->
+<!-- 2. Youtube продакшн — то же самое, ещё чётче -->
 <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.9s">
     <div class="bg-white rounded shadow position-relative h-100 d-flex flex-column" style="z-index: 1;">
         <div class="border-bottom py-4 px-5 mb-4">
-            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4">
-                <iframe src="https://www.youtube.com/embed/qsoROk0mNZw?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0" 
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview" 
+                 style="background-image: url('https://img.youtube.com/vi/qsoROk0mNZw/maxresdefault.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                <iframe class="lazy-iframe" data-src="https://www.youtube.com/embed/qsoROk0mNZw?rel=0&modestbranding=1&autoplay=1" 
                         title="Youtube продакшн" 
-                        allowfullscreen 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        class="border-0 rounded-4">
-                </iframe>
+                        allowfullscreen allow="autoplay; encrypted-media"
+                        frameborder="0" style="display:none;"></iframe>
             </div>
             <h4 class="text-primary mb-1">Youtube продакшн</h4>
             <small class="text-uppercase">4 відео у місяць</small>
@@ -216,7 +214,6 @@
         </div>
     </div>
 </div>
-			
 <!-- 3. Обкладинки → светлый -->
 <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.3s">
     <div class="bg-light rounded h-100 d-flex flex-column">
@@ -581,6 +578,19 @@
       }
     });
   }
+</script>
+
+	<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.youtube-preview').forEach(function(container) {
+        container.addEventListener('click', function() {
+            const iframe = this.querySelector('.lazy-iframe');
+            iframe.src = iframe.dataset.src;
+            iframe.style.display = 'block';
+            this.style.backgroundImage = 'none';
+        });
+    });
+});
 </script>
 
 	<!-- Старый inline-скрипт удалён потому что используется внешний js/telegram-forms.js -->
