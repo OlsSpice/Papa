@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <!-- Базовые мета-теги -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Маркетинг та Відеопродакшен | Paparazzi</title>
 
+    <!-- ПОДКЛЮЧИТЕ ВАШИ СТИЛИ (Скопируйте ссылки из вашего старого файла) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    
+    <!-- Доп. стили для карточек, чтобы они выглядели круто в вашем темном дизайне -->
+    <style>
+        .service-card {
+            background: #111;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #f2a900; /* Ваш фирменный желтый */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-title {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .card-text {
+            color: #bbb;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .btn-read-more {
+            background-color: transparent;
+            border: 2px solid #f2a900;
+            color: #f2a900;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: 0.3s;
+            margin-top: auto;
+        }
+        .btn-read-more:hover {
+            background-color: #f2a900;
+            color: #000;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-top: 60px;
+        }
+        .section-header h2 {
+            font-size: 40px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+        .section-header p {
+            color: #f2a900;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="main-layout">
+
+    <!-- ========================================== -->
+    <!-- ВСТАВЬТЕ ВАШ HEADER (ШАПКУ) ЗДЕСЬ -->
+    <!-- (Скопируйте код <header>...</header> или <div class="header"> из вашего файла) -->
+    <!-- ========================================== -->
+    
+    <!-- ВРЕМЕННАЯ ШАПКА ДЛЯ ПРИМЕРА -->
+    <div style="background: #000; padding: 20px; border-bottom: 1px solid #333; text-align: center;">
+        <h3 style="color: #fff; margin: 0;">PAPARAZZI HEADER PLACEHOLDER</h3>
+    </div>
+
+    <!-- Основной блок с контентом -->
+    <div class="marketing-section" style="background-color: #0c0c0c; min-height: 100vh; padding-bottom: 80px;">
+        <div class="container">
+            
+            <div class="section-header">
+                <h2>Наші Послуги та Експертиза</h2>
+                <p>Маркетинг. Продакшен. Результат.</p>
+            </div>
+
+            <div class="row">
+                
+                <!-- Блок 1: Видео Стратегия -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        
+                        <div class="card-body">
+                            <h3 class="card-title">Відеостратегія: Від Ідеї до ROI</h3>
+                            <p class="card-text">Чому одні відео продають на мільйони, а інші ігнорують? Розбираємо покроковий план створення відеоконтенту, який окуповує інвестиції.</p>
+                            <a href="pages/video-strategy.html" class="btn-read-more">Читати Статтю</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок 2: Контент Воронки -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        [Image of a marketing funnel diagram with conversion points]
+                        <div class="card-body">
+                            <h3 class="card-title">Контент-Воронки 2025</h3>
+                            <p class="card-text">Як залучати клієнтів без холодних дзвінків? Будуємо систему, де відео та контент прогрівають клієнта до покупки автоматично.</p>
+                            <a href="pages/content-funnel-2025.html" class="btn-read-more">Читати Статтю</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок 3: Вирусный SMM -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        
+                        <div class="card-body">
+                            <h3 class="card-title">Вірусний SMM: TikTok & Reels</h3>
+                            <p class="card-text">Алгоритми змінилися. Дізнайтеся секрети утримання уваги та як набрати мільйонні перегляди на коротких відео.</p>
+                            <a href="pages/viral-smm-content.html" class="btn-read-more">Читати Статтю</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок 4: Кейсы -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="service-card">
+                        [Image of a professional case study report or graph]
+                        <div class="card-body">
+                            <h3 class="card-title">$10M Продажів: Наші Кейси</h3>
+                            <p class="card-text">Реальні цифри та результати. Розбір успішних проєктів у сфері нерухомості, інфобізнесу та товарки. Як ми це зробили?</p>
+                            <a href="pages/best-video-case-studies.html" class="btn-read-more">Дивитись Результати</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок 5: AI Инструменты -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="service-card">
+                        
+                        <div class="card-body">
+                            <h3 class="card-title">AI у Продакшені: Економія Бюджету</h3>
+                            <p class="card-text">Як використання нейромереж дозволяє нам робити голлівудську якість швидше і дешевше для клієнта.</p>
+                            <a href="pages/ai-video-production-tools.html" class="btn-read-more">Дізнатись про Технології</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- ВСТАВЬТЕ ВАШ FOOTER (ПОДВАЛ) ЗДЕСЬ -->
+    <!-- ========================================== -->
+    
+    <!-- ВРЕМЕННЫЙ ПОДВАЛ ДЛЯ ПРИМЕРА -->
+    <div style="background: #000; padding: 40px; border-top: 1px solid #333; text-align: center; color: #777;">
+        <p>&copy; 2025 PAPARAZZI.</p>
+    </div>
+
+    <!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
