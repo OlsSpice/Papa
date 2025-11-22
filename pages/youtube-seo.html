@@ -1,69 +1,250 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YouTube для Бізнесу | Paparazzi</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css"> 
-    <link rel="stylesheet" href="../css/responsive.css">
-    <style>
-        body { background-color: #0c0c0c; color: #fff; font-family: 'Nunito', sans-serif; }
-        .article-container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-header h1 { font-size: 36px; font-weight: 800; color: #fff; text-transform: uppercase; margin-bottom: 15px; }
-        .article-meta { color: #f2a900; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; display: block; font-size: 14px; }
-        .article-body { font-size: 18px; line-height: 1.7; color: #d1d1d1; }
-        .article-body h2 { color: #fff; margin-top: 40px; margin-bottom: 20px; font-weight: 700; font-size: 24px; border-left: 4px solid #f2a900; padding-left: 15px; }
-        .article-body strong { color: #fff; }
-        .cta-box { border: 1px solid #333; background: #151515; padding: 40px; text-align: center; margin-top: 50px; border-radius: 8px; }
-        .btn-main { background: #f2a900; color: #000; padding: 12px 30px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 20px; text-transform: uppercase; border-radius: 5px; transition: 0.3s; }
-        .btn-main:hover { background: #fff; color: #000; }
-    </style>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
 </head>
+
 <body>
-
-    <div style="background: #000; padding: 20px; border-bottom: 1px solid #333; text-align: center;">
-        <a href="../blog.html" style="color: #fff; font-weight: bold; text-decoration: none;">&larr; НАЗАД ДО БЛОГУ</a>
-    </div>
-
-    <div class="article-container">
-        <div class="article-header">
-            <span class="article-meta">Безкоштовний Трафік</span>
-            <h1>YouTube для локального бізнесу: Навіщо це СТО чи кав'ярні?</h1>
-            
-        </div>
-
-        <div class="article-body">
-            <p>Більшість українських підприємців думають: "YouTube — це для блогерів або великих брендів". Це помилка, яка коштує вам безкоштовних клієнтів. YouTube — це друга за величиною пошукова система у світі (після Google).</p>
-
-            <h2>1. Ефект "Вічного двигуна"</h2>
-            <p>Пост в Instagram живе 24 години. Reels — 2 тижні. <strong>Відео на YouTube приносить клієнтів роками.</strong> Ми зняли огляд на "Ремонт ходової Audi" для клієнта з Києва 2 роки тому. Це відео досі приводить 3-5 клієнтів щотижня. Без копійки вкладень у рекламу.</p>
-
-            <h2>2. Як називати відео, щоб вас знайшли?</h2>
-            <p>Забудьте про назви типу "Мій влог №5" або "Наша робота". Люди гуглять проблеми.</p>
-            <ul>
-                <li>❌ Погано: "Процедура 567 в нашому салоні"</li>
-                <li>✅ Добре: "Як прибрати зморшки під очима: Огляд процедури в Києві"</li>
-            </ul>
-
-            <h2>3. Що знімати локальному бізнесу?</h2>
-            <p>Не треба знімати кіно. Знімайте експертність:</p>
-            <ul>
-                <li><strong>Будівництво:</strong> "Скільки реально коштує ремонт квартири в 2025 році?"</li>
-                <li><strong>Автосервіс:</strong> "Топ-5 помилок при виборі вживаного авто".</li>
-                <li><strong>Юристи:</strong> "Як не втратити майно під час розлучення".</li>
-            </ul>
-
-            <div class="cta-box">
-                <h3>Хочете запустити YouTube канал для бізнесу?</h3>
-                <p>Ми допоможемо підібрати теми, зняти перші ролики та оптимізувати їх для пошуку.</p>
-                <a href="https://t.me/paparazzi_cam" class="btn-main">Консультація</a>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kyiv, Ukraine</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+38 095 058 08 68</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>sendpaparazzi@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/paparazzi.prod" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.tiktok.com/@paparazzi.prod" target="_blank"><i class="fab fa-tiktok fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.youtube.com/@Paparazzicam" target="_blank"><i class="fab fa-youtube fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://t.me/paparazzi_cam" target="_blank"><i class="fab fa-telegram-plane fw-normal"></i></a>
+                </div>
             </div>
         </div>
     </div>
-    
-    <div style="background: #000; padding: 30px; border-top: 1px solid #333; text-align: center; color: #777;">
-        <p>&copy; 2025 Paparazzi.</p>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="../index.html" class="navbar-brand p-0 me-container">
+                <h1 class="m-0"><i class="fa me-2"></i>Paparazzi</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="../cases.html" class="nav-item nav-link">Кейси</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Послуги</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="../production.html" class="dropdown-item">Продакшн</a>
+                            <a href="../marketing.html" class="dropdown-item">Маркетинг</a>
+                            <a href="../digital.html" class="dropdown-item">Digital рiшення</a>
+                        </div>
+                    </div>
+                    <a href="../contact.html" class="nav-item nav-link">Контакти</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Блог</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="../blog.html" class="dropdown-item">Всі статті</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#quote" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">YouTube для бізнесу</h1>
+                    <a href="../index.html" class="h5 text-white">Головна</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="../blog.html" class="h5 text-white">Блог</a>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Navbar End -->
+
+    <!-- Article Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Article Image -->
+                    <div class="mb-5">
+                                            </div>
+
+                    <h1 class="mb-4">YouTube для локального бізнесу: Навіщо це СТО чи кав'ярні?</h1>
+                    
+                    <div class="bg-light p-5 rounded">
+                        <p class="lead">Більшість українських підприємців думають: "YouTube — це для блогерів або великих брендів". Це помилка, яка коштує вам безкоштовних клієнтів. YouTube — це друга за величиною пошукова система у світі (після Google).</p>
+
+                        <h3 class="mb-3 mt-5 text-primary">1. Ефект "Вічного двигуна"</h3>
+                        <p>Пост в Instagram живе 24 години. Reels — 2 тижні. <strong>Відео на YouTube приносить клієнтів роками.</strong> Ми зняли огляд на "Ремонт ходової Audi" для клієнта з Києва 2 роки тому. Це відео досі приводить 3-5 клієнтів щотижня. Без копійки вкладень у рекламу.</p>
+
+                        <h3 class="mb-3 mt-5 text-primary">2. Як називати відео, щоб вас знайшли?</h3>
+                        <p>Забудьте про назви типу "Мій влог №5" або "Наша робота". Люди гуглять проблеми.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-times text-danger me-2"></i> <strong>Погано:</strong> "Процедура 567 в нашому салоні"</li>
+                            <li><i class="fa fa-check text-success me-2"></i> <strong>Добре:</strong> "Як прибрати зморшки під очима: Огляд процедури в Києві"</li>
+                        </ul>
+
+                        <h3 class="mb-3 mt-5 text-primary">3. Що знімати локальному бізнесу?</h3>
+                        <p>Не треба знімати кіно. Знімайте експертність:</p>
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 text-center rounded shadow-sm h-100">
+                                    <i class="fa fa-hammer text-primary fa-2x mb-3"></i>
+                                    <h5>Будівництво</h5>
+                                    <small>"Скільки реально коштує ремонт квартири в 2025 році?"</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 text-center rounded shadow-sm h-100">
+                                    <i class="fa fa-car text-primary fa-2x mb-3"></i>
+                                    <h5>Автосервіс</h5>
+                                    <small>"Топ-5 помилок при виборі вживаного авто"</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-white p-4 text-center rounded shadow-sm h-100">
+                                    <i class="fa fa-balance-scale text-primary fa-2x mb-3"></i>
+                                    <h5>Юристи</h5>
+                                    <small>"Як не втратити майно під час розлучення"</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action Block -->
+                    <div class="bg-primary rounded p-5 mt-5 text-center wow slideInUp" data-wow-delay="0.1s">
+                        <h3 class="text-white mb-4">Хочете запустити YouTube канал?</h3>
+                        <p class="text-white mb-4">Ми допоможемо підібрати теми, зняти перші ролики та оптимізувати їх для пошуку.</p>
+                        <a href="#quote" class="btn btn-dark py-3 px-5">Отримати Консультацію</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Article End -->
+
+    <!-- Quote Start (Contact Form) -->
+    <div id="quote" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">ЗАПИТ НА КОШТОРИС</h5>
+                        <h1 class="mb-0">Залишились питання? Зв’яжіться з нами</h1>
+                    </div>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Передзвонимо за 30 секунд</h5>
+                            <h4 class="text-primary mb-0">+38 095 058 08 68</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-xl-12"><input type="text" class="form-control bg-light border-0" placeholder="Ім'я" style="height: 55px;"></div>
+                                <div class="col-12"><input type="text" class="form-control bg-light border-0" placeholder="Телефон" style="height: 55px;"></div>
+                                <div class="col-12"><textarea class="form-control bg-light border-0" rows="3" placeholder="Повідомлення"></textarea></div>
+                                <div class="col-12"><button class="btn btn-dark w-100 py-3" type="submit">Зв’язатися</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="../index.html" class="navbar-brand">
+                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Paparazzi</h1>
+                        </a>
+                        <p class="mt-3 mb-4">Підпишіться на наші новини</p>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Контакти</h3>
+                            </div>
+                            <div class="d-flex mb-2"><i class="bi bi-geo-alt text-primary me-2"></i><p class="mb-0">Kyiv, Ukraine</p></div>
+                            <div class="d-flex mb-2"><i class="bi bi-envelope-open text-primary me-2"></i><p class="mb-0">sendpaparazzi@gmail.com</p></div>
+                            <div class="d-flex mb-2"><i class="bi bi-telephone text-primary me-2"></i><p class="mb-0">+38 095 058 0868</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Paparazzi</a>. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
