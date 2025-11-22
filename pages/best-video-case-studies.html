@@ -42,6 +42,7 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="../index.html" class="navbar-brand p-0 me-container">
+                <img class="me-logo" src="../assets/logos/android-chrome-192x192.png" alt="Logo">
                 <h1 class="m-0"><i class="fa me-2"></i>Paparazzi</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -173,16 +174,23 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form>
+                        <form id="bigForm">
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Ваше Ім'я" style="height: 55px;">
+                                    <input type="text" name="name" class="form-control bg-light border-0" placeholder="Ваше Ім'я" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Ваш Телефон" style="height: 55px;">
+                                    <input type="text" name="Телефон" class="form-control bg-light border-0" placeholder="Ваш Телефон" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Коротко про вашу задачу"></textarea>
+                                    <select class="form-select bg-light border-0" style="height: 55px;" name="Продукт">
+                                        <option selected>Оберiть послугу</option>
+                                        <option value="Просування">Просування</option>
+                                        <option value="Консультація">Консультація</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="Коротко про вашу задачу"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-dark w-100 py-3" type="submit">Отримати Консультацію</button>
@@ -254,5 +262,6 @@
     <script src="../lib/counterup/counterup.min.js"></script>
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/telegram-forms.js"></script>
 </body>
 </html>
