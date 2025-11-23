@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Фото та Відеопослуги</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+	
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kyiv, Ukraine</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+38 095 058 08 68</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>sendpaparazzi@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <!-- Instagram -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://www.instagram.com/paparazzi.prod" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fab fa-instagram fw-normal"></i>
+                </a>
+                
+                <!-- TikTok -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://www.tiktok.com/@paparazzi.prod" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+                    <i class="fab fa-tiktok fw-normal"></i>
+                </a>
+                
+                <!-- YouTube -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://www.youtube.com/@Paparazzicam" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="fab fa-youtube fw-normal"></i>
+                </a>
+                
+                <!-- Telegram (запасной, если захочешь) -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://t.me/paparazzi_cam" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Telegram">
+                    <i class="fab fa-telegram-plane fw-normal"></i>
+                </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+
+    <!-- Navbar & Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0 me-container">
+                <img class="me-logo" src="assets/logos/android-chrome-192x192.png">
+                <h1 class="m-0"><i class="fa me-2"></i>Paparazzi</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <!-- <a href="index.html" class="nav-item nav-link active">Home</a> -->
+                    <a href="cases.html" class="nav-item nav-link">Кейси</a>
+                    <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Послуги</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="production.html" class="dropdown-item">Продакшн</a>
+                            <a href="marketing.html" class="dropdown-item">Маркетинг</a>
+                            <a href="digital.html" class="dropdown-item">Digital рiшення</a>
+                            <!-- <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="quote.html" class="dropdown-item">Free Quote</a> -->
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Контакти</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Блог</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button> -->
+                <!-- <a href="quote.html" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a> -->
+                <a href="#quote" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">Зв'яжіться з нами</h1>
+                    <a href="" class="h5 text-white">Голоовна</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="" class="h5 text-white">Контакти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div style="width: 100vw; height: 100px; background-color: rgba(9, 30, 62, .7);">
+    </div>
+
+<!-- Pricing Plan Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h1 class="mb-0">Фото та відеопослуги для вашого бізнесу</h1>
+        </div>
+
+        <!-- ПЕРВАЯ ТРОЙКА -->
+        <div class="row g-4 justify-content-center mb-5">
+
+<!-- 1. Фото/відео оператор -->
+<div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.6s">
+    <div class="bg-light rounded h-100 d-flex flex-column">
+        <div class="border-bottom py-4 px-5 mb-4">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview position-relative"
+                 style="background-image: url('https://img.youtube.com/vi/9fHh1ArOv2E/maxresdefault.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                 
+                <div class="position-absolute top-50 start-50 translate-middle z-3 play-button">
+                    <div class="bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                         style="width: 80px; height: 80px; backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.2);">
+                        <i class="fa fa-play text-white fs-3 ms-2"></i>
+                    </div>
+                </div>
+
+                <iframe class="lazy-iframe position-absolute top-0 start-0 w-100 h-100 border-0 rounded-4" 
+                        data-src="https://www.youtube.com/embed/9fHh1ArOv2E?rel=0&modestbranding=1&autoplay=1" 
+                        allowfullscreen allow="autoplay"
+                        frameborder="0" style="display:none;"></iframe>
+            </div>
+
+            <h4 class="text-primary mb-1">Фото або відеоператор</h4>
+            <small class="text-uppercase">Під вашу задачу</small>
+        </div>
+        <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+            <h1 class="display-5 mb-4">
+                <small class="align-top" style="font-size: 22px; line-height: 45px;">₴</small>2500
+                <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Година</small>
+            </h1>
+            <div class="d-flex justify-content-between mb-3"><span>Зйомка 4к або FHD</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <a href="#quote" class="btn btn-primary py-2 px-4 mt-auto w-100">Замовити</a>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Youtube продакшн — кнопка теперь точно такого же размера как первая -->
+<div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.9s">
+    <div class="bg-white rounded shadow position-relative h-100 d-flex flex-column" style="z-index: 1;">
+        <div class="border-bottom py-4 px-5 mb-4">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview position-relative"
+                 style="background-image: url('https://img.youtube.com/vi/qsoROk0mNZw/maxresdefault.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                 
+                <div class="position-absolute top-50 start-50 translate-middle z-3 play-button">
+                    <div class="bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                         style="width: 80px; height: 80px; backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.2);">
+                        <i class="fa fa-play text-white fs-3 ms-2"></i>
+                    </div>
+                </div>
+
+                <iframe class="lazy-iframe position-absolute top-0 start-0 w-100 h-100 border-0 rounded-4" 
+                        data-src="https://www.youtube.com/embed/qsoROk0mNZw?rel=0&modestbranding=1&autoplay=1" 
+                        allowfullscreen allow="autoplay"
+                        frameborder="0" style="display:none;"></iframe>
+            </div>
+
+            <h4 class="text-primary mb-1">Youtube продакшн</h4>
+            <small class="text-uppercase">4 відео у місяць</small>
+        </div>
+        <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+            <h1 class="display-5 mb-4">
+                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>1200
+                <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Місяць</small>
+            </h1>
+            <div class="d-flex justify-content-between mb-3"><span>Обкладинки</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <div class="d-flex justify-content-between mb-3"><span>Сценарій</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <div class="d-flex justify-content-between mb-3"><span>Монтаж</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <div class="d-flex justify-content-between mb-3"><span>Iнфографіка</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <div class="d-flex justify-content-between mb-3"><span>Титри</span><i class="fa fa-check text-primary pt-1"></i></div>
+            <a href="#quote" class="btn btn-primary py-2 px-4 mt-auto w-100">Замовити</a>
+        </div>
+    </div>
+</div>
+<!-- 3. Обкладинки → светлый -->
+<div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.3s">
+    <div class="bg-light rounded h-100 d-flex flex-column">
+        <div class="border-bottom py-4 px-5 mb-4">
+            <img src="img/obkladka.jpg" class="w-100 rounded-4 shadow mb-4" alt="Обкладинки" style="aspect-ratio: 16/9; object-fit: cover;">
+            <h4 class="text-primary mb-1">Обкладинки для YouTube</h4>
+            <small class="text-uppercase">Створення обкладинки для відео</small>
+        </div>
+        <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+            <h1 class="display-5 mb-4">
+                <small class="align-top" style="font-size: 22px; line-height: 45px;">₴</small>600
+                <small class="align-bottom" style="font-size: 16px; line-height: 40px;"> / 1 шт</small>
+            </h1>
+            
+            <a href="#quote" class="btn btn-primary py-2 px-4 mt-auto w-100">Замовити</a>
+        </div>
+    </div>
+</div>
+
+                    <!-- ВТОРАЯ ТРОЙКА — ВЕРНУТО КАК БЫЛО ИЗНАЧАЛЬНО -->
+        <div class="row g-4 justify-content-center">
+   
+            <!-- 4 Вертикальних відео -->
+            <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.3s">
+                <div class="bg-white rounded shadow position-relative h-100 d-flex flex-column" style="z-index: 1;">
+                    <div class="border-bottom py-4 px-5 mb-4">
+                        <!-- ИЗМЕНЕНИЕ: Убран fixed height и добавлен max-width для адаптивности на мобильных устройствах -->
+                        <div class="position-relative rounded-4 overflow-hidden shadow mb-4 mx-auto" style="aspect-ratio: 9/16; max-width: 300px;">
+                            <iframe src="https://www.youtube.com/embed/JpLoys8aORQ" title="YouTube Shorts" allowfullscreen
+                                    class="position-absolute top-0 start-0 w-100 h-100 border-0"></iframe>
+                        </div>
+                        <h4 class="text-primary mb-1">4 Вертикальних відео</h4>
+                        <small class="text-uppercase">4 креативів для Ads реклами</small>
+                    </div>
+                    <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+                        <h1 class="display-5 mb-4">
+                            <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>900
+                        </h1>
+                        <div class="d-flex justify-content-between mb-3"><span>Full HD або 4К відео</span><i class="fa fa-check text-primary pt-1"></i></div>
+                        <div class="d-flex justify-content-between mb-3"><span>Сценарій</span><i class="fa fa-check text-primary pt-1"></i></div>
+                        <div class="d-flex justify-content-between mb-3"><span>Титри та Анімація</span><i class="fa fa-check text-primary pt-1"></i></div>
+                        <div class="d-flex justify-content-between mb-3"><span>Актори за потреби</span><i class="fa fa-check text-primary pt-1"></i></div>
+                       
+                        <a href="#quote" class="btn btn-primary py-2 px-4 mt-auto w-100">Замовити</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 25 креативів для SMM -->
+            <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.9s">
+                <div class="bg-light rounded h-100 d-flex flex-column">
+                    <div class="border-bottom py-4 px-5 mb-4">
+                        <!-- ИЗМЕНЕНИЕ: Убран fixed height и добавлен max-width для адаптивности на мобильных устройствах -->
+                        <div class="position-relative rounded-4 overflow-hidden shadow mb-4 mx-auto" style="aspect-ratio: 9/16; max-width: 300px;">
+                            <iframe src="https://www.youtube.com/embed/jvwemy8Fx6s" title="YouTube Shorts" allowfullscreen
+                                    class="position-absolute top-0 start-0 w-100 h-100 border-0"></iframe>
+                        </div>
+                        <h4 class="text-primary mb-1">25 креативів для SMM</h4>
+                        <small class="text-uppercase d-block">25 відео для соцмереж</small>
+                    </div>
+                    <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+                        <h1 class="display-5 mb-4">
+                            <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>1200
+                        </h1>
+                        <div class="d-flex justify-content-between mb-3"><span>Full HD або 4К відео</span><i class="fa fa-check text-primary pt-1"></i></div>
+                        <div class="d-flex justify-content-between mb-3"><span>Сценарій</span><i class="fa fa-check text-primary pt-1"></i></div>
+                        <div class="d-flex justify-content-between mb-3"><span>Титри та Анімація</span><i class="fa fa-check text-primary pt-1"></i></div>
+                        <div class="d-flex justify-content-between mb-3"><span>Актори за потреби</span><i class="fa fa-check text-primary pt-1"></i></div>
+                       
+                        <a href="#quote" class="btn btn-primary py-2 px-4 mt-auto w-100">Замовити</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Експертне відео -->
+            <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.3s">
+                <div class="bg-white rounded shadow position-relative h-100 d-flex flex-column" style="z-index: 1;">
+                    <div class="border-bottom py-4 px-5 mb-4">
+                        <!-- ИЗМЕНЕНИЕ: Убран fixed height и добавлен max-width для адаптивности на мобильных устройствах -->
+                        <div class="position-relative rounded-4 overflow-hidden shadow mb-4 mx-auto" style="aspect-ratio: 9/16; max-width: 300px;">
+                            <iframe src="https://www.youtube.com/embed/QJ1-GFT1VdU" title="YouTube Shorts" allowfullscreen
+                                    class="position-absolute top-0 start-0 w-100 h-100 border-0"></iframe>
+                        </div>
+                        <h4 class="text-primary mb-1">Експертне відео</h4>
+                        <small class="text-uppercase">Креатив</small>
+                        <small class="text-uppercase">Для Ads реклами</small>
+                    </div>
+                    <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+                        <h1 class="display-5 mb-4">
+                            <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>300
+                        </h1>
+                        <div class="d-flex justify-content-between mb-3"><span>Full HD або 4К відео</span><i class="fa fa-check text-primary pt-1"></i></div>
+                        <div class="d-flex justify-content-between mb-3"><span>Сценарій</span><i class="fa fa-check text-primary pt-1"></i></div>
+                        <div class="d-flex justify-content-between mb-3"><span>Титри та Анімація</span><i class="fa fa-check text-primary pt-1"></i></div>
+                       
+                        <a href="#quote" class="btn btn-primary py-2 px-4 mt-auto w-100">Замовити</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+			
+    </div>
+</div>
+<!-- Pricing Plan End -->
+
+
+    <!-- Quote Start -->
+    <div id="quote" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s"></div>
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">ЗАПИТ НА КОШТОРИС</h5>
+                        <h1 class="mb-0">Потрібен безкоштовний кошторис? Будь ласка, зв’яжіться з нами</h1>
+                    </div>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Відповідь протягом 24 годин</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>Цілодобова телефонна підтримка</h5>
+                        </div>
+                    </div>
+                    <!-- <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p> -->
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <!-- <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div> -->
+                        <div class="phone-form">
+                            <h5 class="mb-2" style="color: black;">Ми зв'яжемося з вами протягом 30 секунд</h5>
+                      <form id="phoneForm">
+                           <div class="row g-3 phone-form">
+                          <div class="col-xl-12" style="width: 300px;">
+                          <input type="text" name="Телефон" class="form-control border-0" placeholder="Ваш телефон" style="width: 300px; height: 50px;">
+                 </div>
+                       <div class="col-12">
+                         <button class="btn btn-dark" style="width: 300px;" type="submit">Зв’язатися</button>
+                      </div>
+                     </div>
+                 </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                       <!-- NEW: большая форма с полем телефона и уникальным id -->
+<form id="bigForm">
+  <div class="row g-3">
+    <div class="col-xl-12">
+      <input type="text" name="name" class="form-control bg-light border-0" placeholder="Ім'я" style="height: 55px;">
+    </div>
+    <div class="col-12">
+      <input type="email" name="email" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;">
+    </div>
+
+    <!-- Добавлено поле телефона в большой форме -->
+    <div class="col-12">
+      <input type="text" name="Телефон" class="form-control bg-light border-0" placeholder="Ваш телефон" style="height: 55px;">
+    </div>
+
+    <div class="col-12">
+      <select class="form-select bg-light border-0" style="height: 55px;" name="Продукт">
+        <option selected>Оберiть послугу</option>
+        <option value="1">Консультація</option>
+        <option value="2">Продакшн</option>
+        <option value="3">Маркетинг</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="ПовIдомлення"></textarea>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-dark w-100 py-3" type="submit">Зв’язатися</button>
+    </div>
+  </div>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 mb-5">
+            <div class="bg-white">
+                <div class="owl-carousel vendor-carousel">
+                    <img src="img/vendor-1.jpg" alt="">
+                    <img src="img/vendor-2.jpg" alt="">
+                    <img src="img/vendor-3.jpg" alt="">
+                    <img src="img/vendor-4.jpg" alt="">
+                    <img src="img/vendor-5.jpg" alt="">
+                    <img src="img/vendor-6.jpg" alt="">
+                    <img src="img/vendor-7.jpg" alt="">
+                    <img src="img/vendor-8.jpg" alt="">
+                    <img src="img/vendor-9.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+    
+
+ <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Paparazzi</h1>
+                        </a>
+                        <p class="mt-3 mb-4">Залишайте заявку на консультацію</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <button class="btn btn-dark">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Зв'яжіться з нами</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Kyiv, Ukraine</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">sendpaparazzi@gmail.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+38 095 058 0868</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                      <!-- Instagram -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://www.instagram.com/paparazzi.prod" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fab fa-instagram fw-normal"></i>
+                </a>
+                
+                <!-- TikTok -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://www.tiktok.com/@paparazzi.prod" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+                    <i class="fab fa-tiktok fw-normal"></i>
+                </a>
+                
+                <!-- YouTube -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://www.youtube.com/@Paparazzicam" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="fab fa-youtube fw-normal"></i>
+                </a>
+                
+                <!-- Telegram (запасной, если захочешь) -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://t.me/paparazzi_cam" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Telegram">
+                    <i class="fab fa-telegram-plane fw-normal"></i>
+                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Перехід</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Головна</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Про нас</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Послуги</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Команда</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Зв'язок</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Популярні</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Головна</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Про нас</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Послуги</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Команда</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Зв'язок</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Paparazzi</a>. All Rights Reserved. 
+						
+						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+					
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+<script type="module">
+  // ... инициализация Firebase как было выше ...
+
+  // Привязка Firebase только к phoneForm
+  const form = document.getElementById('phoneForm');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      let data = {};
+      formData.forEach((value, key) => { data[key] = value; });
+      try {
+        await addDoc(coll, data);
+      } catch (error) {
+        console.error('Firebase error:', error);
+      }
+    });
+  }
+</script>
+
+
+
+	<!-- Старый inline-скрипт удалён потому что используется внешний js/telegram-forms.js -->
+  <script src="js/telegram-forms.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.youtube-preview').forEach(function(container) {
+        container.addEventListener('click', function() {
+            const iframe = this.querySelector('.lazy-iframe');
+            const playButton = this.querySelector('.play-button');
+            
+            iframe.src = iframe.dataset.src;
+            iframe.style.display = 'block';
+            playButton.style.opacity = '0';
+            playButton.style.transition = 'opacity 0.4s';
+            this.style.backgroundImage = 'none';
+        });
+    });
+});
+</script>
+</body>
+
+</html>
