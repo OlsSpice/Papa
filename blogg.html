@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="utf-8">
-    <title>Startup - Startup Website Template</title>
+    <title>Paparazzi - Блог про Відеомаркетинг</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Відеопродакшен, Маркетинг, SMM, Блог, Воронки продажів" name="keywords">
+    <meta content="Корисні статті про відеопродакшен та маркетинг в Україні від Paparazzi" name="description">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/logos/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/assets/logos/android-chrome-512x512.png">
-<link rel="manifest" href="/assets/logos/site.webmanifest">
-<link rel="icon" href="/assets/logos/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/logos/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/logos/android-chrome-512x512.png">
+    <link rel="manifest" href="/assets/logos/site.webmanifest">
+    <link rel="icon" href="/assets/logos/favicon.ico">
 
 
     <!-- Google Web Fonts -->
@@ -85,7 +85,7 @@
                     <i class="fab fa-youtube fw-normal"></i>
                 </a>
                 
-                <!-- Telegram (запасной, если захочешь) -->
+                <!-- Telegram -->
                 <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
                    href="https://t.me/paparazzi_cam" 
                    target="_blank" 
@@ -101,12 +101,11 @@
     <!-- Topbar End -->
 
 
-
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0 me-container">
-                <img class="me-logo" src="assets/logos/android-chrome-192x192.png">
+                <img class="me-logo" src="assets/logos/android-chrome-192x192.png" onerror="this.style.display='none'">
                 <h1 class="m-0"><i class="fa me-2"></i>Paparazzi</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -114,41 +113,36 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <!-- <a href="index.html" class="nav-item nav-link active">Home</a> -->
                     <a href="cases.html" class="nav-item nav-link">Кейси</a>
-                    <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Послуги</a>
                         <div class="dropdown-menu m-0">
                             <a href="production.html" class="dropdown-item">Продакшн</a>
                             <a href="marketing.html" class="dropdown-item">Маркетинг</a>
                             <a href="digital.html" class="dropdown-item">Digital рiшення</a>
-                            <!-- <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="quote.html" class="dropdown-item">Free Quote</a> -->
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Контакти</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Блог</a>
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Блог</a>
                         <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="blog.html" class="dropdown-item active">Статті</a>
                             <a href="detail.html" class="dropdown-item">Blog Detail</a>
                         </div>
                     </div>
                 </div>
-                <!-- <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button> -->
-                <!-- <a href="quote.html" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a> -->
-                <a href="#quote" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a>
+                <!-- ЗМІНЕНО: Кнопка Зв'язатися веде на форму внизу сторінки -->
+                <a href="#quote-form" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a>
             </div>
         </nav>
 
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">Зв'жіться з нами</h1>
-                    <a href="" class="h5 text-white">Голоовна</a>
+                    <h1 class="display-4 text-white animated zoomIn">Блог & Корисне</h1>
+                    <a href="index.html" class="h5 text-white">Головна</a>
                     <i class="far fa-circle text-white px-2"></i>
-                    <a href="" class="h5 text-white">Контакти</a>
+                    <a href="blog.html" class="h5 text-white">Блог</a>
                 </div>
             </div>
         </div>
@@ -165,7 +159,7 @@
                 </div>
                 <div class="modal-body d-flex align-items-center justify-content-center">
                     <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Введіть запит...">
                         <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
                     </div>
                 </div>
@@ -182,176 +176,199 @@
                 <!-- Blog list Start -->
                 <div class="col-lg-8">
                     <div class="row g-5">
+                        
+                        <!-- 1. Стратегія -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-1.jpg" alt="Video Strategy">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/video-strategy.html">Стратегія</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Січень 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">Відеостратегія: Як не злити бюджет?</h4>
+                                    <p>Покроковий план створення відеоконтенту для українського бізнесу. Як почати з невеликих вкладень і отримати перші заявки.</p>
+                                    <a class="text-uppercase" href="pages/video-strategy.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 2. Воронки -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-2.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-2.jpg" alt="Content Funnel">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/content-funnel-2025.html">Воронки</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Січень 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">Автоворонки: Клієнти на автоматі</h4>
+                                    <p>Як налаштувати потік заявок без холодних дзвінків? Проста схема: Reels -> Бот -> Продаж. Реальні приклади.</p>
+                                    <a class="text-uppercase" href="pages/content-funnel-2025.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 3. YouTube для бізнесу -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-3.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-3.jpg" alt="YouTube SEO">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/youtube-seo.html">YouTube</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Січень 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">YouTube для локального бізнесу</h4>
+                                    <p>Чи варто заходити на YouTube магазину взуття або СТО? Як отримувати безкоштовний трафік з пошуку роками.</p>
+                                    <a class="text-uppercase" href="pages/youtube-seo.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 4. Бюджетна реклама -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-4.jpg" alt="Low Budget Ads">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/low-budget-ads.html">Реклама</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Лютий 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">Як продавати без дорогого продакшену?</h4>
+                                    <p>Тренди 2025: "живі" відео на телефон працюють краще за глянцеву рекламу. Секрети UGC-креативів.</p>
+                                    <a class="text-uppercase" href="pages/low-budget-ads.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 5. SMM: TikTok vs Instagram -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-2.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-5.jpg" alt="TikTok vs Reels">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/viral-smm-content.html">SMM</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Лютий 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">TikTok чи Instagram Reels?</h4>
+                                    <p>Де дешевше клієнт? Аналізуємо алгоритми та обираємо платформу для старту в Україні.</p>
+                                    <a class="text-uppercase" href="pages/viral-smm-content.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 6. Особистий бренд -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-3.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-6.jpg" alt="Personal Brand">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/personal-brand.html">Бренд</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Лютий 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">Особистий бренд власника</h4>
+                                    <p>Чому люди купують у людей? Як власнику почати зніматися у відео та збільшити довіру до бізнесу.</p>
+                                    <a class="text-uppercase" href="pages/personal-brand.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 7. Кейси (Реальні цифри) -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-7.jpg" alt="Case Studies">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/best-video-case-studies.html">Кейси</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Березень 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">Зростання продажів х3: Наші Кейси</h4>
+                                    <p>Реальні результати українських бізнесів. Без "мільйонів", але зі стабільним прибутком.</p>
+                                    <a class="text-uppercase" href="pages/best-video-case-studies.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 8. AI Інструменти -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-2.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-8.jpg" alt="AI Tools">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/ai-video-production-tools.html">Технології</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Березень 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">AI для економії бюджету</h4>
+                                    <p>Як безкоштовні нейромережі допомагають писати сценарії та монтувати відео швидше.</p>
+                                    <a class="text-uppercase" href="pages/ai-video-production-tools.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                         <!-- 9. UGC Контент -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-3.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-9.jpg" alt="UGC Content">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/ugc-content.html">UGC</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Березень 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">Контент від клієнтів (UGC)</h4>
+                                    <p>Чому відео, зняте клієнтом на кухні, продає краще за студійну зйомку? Як мотивувати залишати відгуки.</p>
+                                    <a class="text-uppercase" href="pages/ugc-content.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 10. Тренди монтажу -->
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-light rounded overflow-hidden h-100">
                                 <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                                    <img class="img-fluid" src="img/blog-10.jpg" alt="Video Trends">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="pages/video-trends-2025.html">Тренди</a>
                                 </div>
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>Paparazzi</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>Квітень 2025</small>
                                     </div>
-                                    <h4 class="mb-3">How to build a website</h4>
-                                    <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                                    <h4 class="mb-3">Динамічний монтаж: Як втримати увагу</h4>
+                                    <p>Секрети монтажу для Reels та TikTok. Як зробити так, щоб ваше відео додивилися до кінця.</p>
+                                    <a class="text-uppercase" href="pages/video-trends-2025.html">Читати далі <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
+
+
+                        <!-- Пагінація -->
                         <div class="col-12 wow slideInUp" data-wow-delay="0.1s">
                             <nav aria-label="Page navigation">
                               <ul class="pagination pagination-lg m-0">
@@ -377,26 +394,19 @@
     
                 <!-- Sidebar Start -->
                 <div class="col-lg-4">
-                    <!-- Search Form Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="input-group">
-                            <input type="text" class="form-control p-3" placeholder="Keyword">
-                            <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                        </div>
-                    </div>
-                    <!-- Search Form End -->
     
                     <!-- Category Start -->
+                    <!-- ЗМІНЕНО: Посилання категорій стали заглушками, що натискаються -->
                     <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Categories</h3>
+                            <h3 class="mb-0">Категорії</h3>
                         </div>
                         <div class="link-animated d-flex flex-column justify-content-start">
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Web Design</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Web Development</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Web Development</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Keyword Research</a>
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Email Marketing</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="production.html"><i class="bi bi-arrow-right me-2"></i>Відеопродакшен</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="pages/viral-smm-content.html"><i class="bi bi-arrow-right me-2"></i>SMM & Reels</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="pages/content-funnel-2025.html"><i class="bi bi-arrow-right me-2"></i>Воронки Продажів</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="pages/low-budget-ads.html"><i class="bi bi-arrow-right me-2"></i>Бюджетний Маркетинг</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="pages/personal-brand.html"><i class="bi bi-arrow-right me-2"></i>Особистий Бренд</a>
                         </div>
                     </div>
                     <!-- Category End -->
@@ -404,86 +414,138 @@
                     <!-- Recent Post Start -->
                     <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Recent Post</h3>
+                            <h3 class="mb-0">Свіжі публікації</h3>
                         </div>
                         <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="img/blog-1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
+                            <img class="img-fluid" src="img/blog-4.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                            <a href="pages/video-strategy.html" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Стратегія відео для малого бізнесу
                             </a>
                         </div>
                         <div class="d-flex rounded overflow-hidden mb-3">
                             <img class="img-fluid" src="img/blog-2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
+                            <a href="pages/content-funnel-2025.html" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Автоворонки без відділу продажів
                             </a>
                         </div>
                         <div class="d-flex rounded overflow-hidden mb-3">
                             <img class="img-fluid" src="img/blog-3.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
+                            <a href="pages/viral-smm-content.html" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Як знімати Reels на телефон
                             </a>
                         </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
+                         <div class="d-flex rounded overflow-hidden mb-3">
                             <img class="img-fluid" src="img/blog-1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="img/blog-2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                            </a>
-                        </div>
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="img/blog-3.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
+                            <a href="pages/youtube-seo.html" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">YouTube для бізнесу: з чого почати
                             </a>
                         </div>
                     </div>
                     <!-- Recent Post End -->
     
                     <!-- Image Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                        <img src="img/blog-1.jpg" alt="" class="img-fluid rounded">
+                    <!-- ЗМІНЕНО: Кнопка веде на нову секцію з формою (#quote-form) -->
+                 <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                        <div style="background: #f2a900; padding: 20px; text-align: center; border-radius: 5px;">
+                            <h4 style="color: #000;">Потрібен розбір?</h4>
+                            <p style="color: #000; font-size: 14px;">Запишіться на безкоштовну консультацію по відеомаркетингу</p>
+                            <a href="#quote-form" class="btn btn-dark btn-sm">Записатися</a>
+                        </div>
                     </div>
                     <!-- Image End -->
     
                     <!-- Tags Start -->
                     <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Tag Cloud</h3>
+                            <h3 class="mb-0">Теги</h3>
                         </div>
                         <div class="d-flex flex-wrap m-n1">
-                            <a href="" class="btn btn-light m-1">Design</a>
-                            <a href="" class="btn btn-light m-1">Development</a>
-                            <a href="" class="btn btn-light m-1">Marketing</a>
-                            <a href="" class="btn btn-light m-1">SEO</a>
-                            <a href="" class="btn btn-light m-1">Writing</a>
-                            <a href="" class="btn btn-light m-1">Consulting</a>
-                            <a href="" class="btn btn-light m-1">Design</a>
-                            <a href="" class="btn btn-light m-1">Development</a>
-                            <a href="" class="btn btn-light m-1">Marketing</a>
-                            <a href="" class="btn btn-light m-1">SEO</a>
-                            <a href="" class="btn btn-light m-1">Writing</a>
-                            <a href="" class="btn btn-light m-1">Consulting</a>
+                            <a href="" class="btn btn-light m-1">Відео</a>
+                            <a href="" class="btn btn-light m-1">Маркетинг</a>
+                            <a href="" class="btn btn-light m-1">SMM</a>
+                            <a href="" class="btn btn-light m-1">TikTok</a>
+                            <a href="" class="btn btn-light m-1">YouTube</a>
+                            <a href="" class="btn btn-light m-1">Продакшен</a>
+                            <a href="" class="btn btn-light m-1">UGC</a>
+                            <a href="" class="btn btn-light m-1">Бюджет</a>
+                            <a href="" class="btn btn-light m-1">Воронки</a>
                         </div>
                     </div>
                     <!-- Tags End -->
-    
-                    <!-- Plain Text Start -->
-                    <div class="wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Plain Text</h3>
-                        </div>
-                        <div class="bg-light text-center" style="padding: 30px;">
-                            <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor ipsum amet diam</p>
-                            <a href="" class="btn btn-primary py-2 px-4">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Plain Text End -->
                 </div>
                 <!-- Sidebar End -->
             </div>
         </div>
     </div>
     <!-- Blog End -->
+
+    <!-- Quote/Contact Form Start (СКОПІЙОВАНО З index (1).html) -->
+    <div id="quote-form" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">ЗАПИТ НА КОШТОРИС</h5>
+                        <h1 class="mb-0">Потрібен безкоштовний кошторис? Будь ласка, зв’яжіться з нами</h1>
+                    </div>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Відповідь протягом 24 годин</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>Цілодобова телефонна підтримка</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="phone-form">
+                            <h5 class="mb-2" style="color: black;">Ми зв'яжемося з вами протягом 30 секунд</h5>
+                            <!-- Changed ID to phoneForm to match production.html logic -->
+                            <form id="phoneForm">
+                                <div class="row g-3 phone-form">
+                                    <div class="col-xl-12" style="width: 300px;">
+                                        <input type="text" name="Телeфон" class="form-control border-0" placeholder="Ваш телфон" style="width: 300px; height: 50px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-dark" style="width: 300px;" type="submit">Зв’язатися</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                         <!-- Changed ID to bigForm to match production.html logic -->
+                        <form id="bigForm" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <input type="text" name="name" class="form-control bg-light border-0" placeholder="Ім'я" required style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" name="Телефон" class="form-control bg-light border-0" placeholder="Ваш телефон *" required style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <select name="Продукт" class="form-select bg-light border-0" required style="height: 55px;">
+                                        <option selected>Оберіть послугу</option>
+                                        <option value="SMM">SMM</option>
+                                        <option value="Відео продакшн">Відео продакшн</option>
+                                        <option value="Рилсы">Рилсы</option>
+                                        <option value="Реклама">Реклама</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control bg-light border-0" rows="5" placeholder="Повідомлення"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-dark w-100 py-3" type="submit">Зв’язатися</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote/Contact Form End -->
 
 
     <!-- Vendor Start -->
@@ -519,8 +581,8 @@
                         <p class="mt-3 mb-4">Залишайте заявку на консультацію</p>
                         <form action="">
                             <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                <button class="btn btn-dark">Sign Up</button>
+                                <input type="text" class="form-control border-white p-3" placeholder="Ваш Email">
+                                <button class="btn btn-dark">Відправити</button>
                             </div>
                         </form>
                     </div>
@@ -571,7 +633,7 @@
                     <i class="fab fa-youtube fw-normal"></i>
                 </a>
                 
-                <!-- Telegram (запасной, если захочешь) -->
+                <!-- Telegram -->
                 <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
                    href="https://t.me/paparazzi_cam" 
                    target="_blank" 
@@ -591,7 +653,7 @@
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Про нас</a>
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Послуги</a>
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Команда</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Блог</a>
                                 <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Зв'язок</a>
                             </div>
                         </div>
@@ -604,7 +666,7 @@
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Про нас</a>
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Послуги</a>
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Команда</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Блог</a>
                                 <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Зв'язок</a>
                             </div>
                         </div>
@@ -619,9 +681,6 @@
                 <div class="col-lg-8 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
                         <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Paparazzi</a>. All Rights Reserved. 
-						
-						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-					
                     </div>
                 </div>
             </div>
@@ -645,6 +704,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- Telegram forms logic added here as per production page -->
+    <script src="js/telegram-forms.js"></script>
 </body>
 
 </html>
