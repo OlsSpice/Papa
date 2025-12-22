@@ -241,7 +241,7 @@
 
 
 	
-<!-- Як ми працюємо – змейка + стрелки на всех устройствах Start -->
+<!-- Як ми працюємо – исправленные стрелки Start -->
 <section class="container-fluid py-5 bg-dark text-light position-relative" id="how-we-work">
     <div class="container py-5">
         <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 800px;">
@@ -252,63 +252,49 @@
 
         <div class="process-wrapper position-relative">
             <div class="process-grid">
-                <!-- Етап 1 -->
+                <!-- 8 этапов (как раньше) -->
                 <div class="step wow fadeInUp" data-wow-delay="0.1s">
                     <div class="step-number">1</div>
                     <div class="step-icon"><i class="fas fa-comments"></i></div>
                     <h3 class="step-title">Консультація та аудит</h3>
                     <p class="step-desc">Аналізуємо ваш бізнес, контент і рекламу. Безкоштовно пропонуємо план покращення.</p>
                 </div>
-
-                <!-- Етап 2 -->
                 <div class="step wow fadeInUp" data-wow-delay="0.2s">
                     <div class="step-number">2</div>
                     <div class="step-icon"><i class="fas fa-file-contract"></i></div>
                     <h3 class="step-title">Укладання контракту</h3>
                     <p class="step-desc">Фіксуємо ціни, терміни та гарантії. Прозоро та без сюрпризів.</p>
                 </div>
-
-                <!-- Етап 3 -->
                 <div class="step wow fadeInUp" data-wow-delay="0.3s">
                     <div class="step-number">3</div>
                     <div class="step-icon"><i class="fas fa-lightbulb"></i></div>
                     <h3 class="step-title">Розробка сценарію</h3>
                     <p class="step-desc">Створюємо ідею, яка ідеально підходить під ваш продукт чи послугу.</p>
                 </div>
-
-                <!-- Етап 4 -->
                 <div class="step wow fadeInUp" data-wow-delay="0.4s">
                     <div class="step-number">4</div>
                     <div class="step-icon"><i class="fas fa-camera"></i></div>
                     <h3 class="step-title">Зйомка</h3>
                     <p class="step-desc">Професійна фото- та відеозйомка товарів, послуг, промо-роликів.</p>
                 </div>
-
-                <!-- Етап 5 -->
                 <div class="step wow fadeInUp" data-wow-delay="0.5s">
                     <div class="step-number">5</div>
                     <div class="step-icon"><i class="fas fa-film"></i></div>
                     <h3 class="step-title">Монтаж та постпродакшн</h3>
                     <p class="step-desc">Редагуємо, додаємо графіку, звук — топовий готовий контент.</p>
                 </div>
-
-                <!-- Етап 6 -->
                 <div class="step wow fadeInUp" data-wow-delay="0.6s">
                     <div class="step-number">6</div>
                     <div class="step-icon"><i class="fas fa-mobile-alt"></i></div>
                     <h3 class="step-title">Ведення SMM (опціонально)</h3>
                     <p class="step-desc">Пости, сторіз, регулярний контент для соцмереж.</p>
                 </div>
-
-                <!-- Етап 7 -->
                 <div class="step wow fadeInUp" data-wow-delay="0.7s">
                     <div class="step-number">7</div>
                     <div class="step-icon"><i class="fas fa-bullhorn"></i></div>
                     <h3 class="step-title">Налаштування та запуск реклами</h3>
                     <p class="step-desc">Таргетинг на вашу аудиторію — ліди та продажі одразу.</p>
                 </div>
-
-                <!-- Етап 8 -->
                 <div class="step wow fadeInUp" data-wow-delay="0.8s">
                     <div class="step-number">8</div>
                     <div class="step-icon"><i class="fas fa-chart-line"></i></div>
@@ -317,9 +303,8 @@
                 </div>
             </div>
 
-            <!-- SVG стрілки тільки на десктопі -->
+            <!-- SVG-стрелки ТОЛЬКО на десктопе -->
             <svg class="process-arrows desktop-only" viewBox="0 0 1400 600" preserveAspectRatio="none">
-                <!-- ... (те ж саме, що було раніше) ... -->
                 <path d="M 200 150 L 500 150" class="arrow-line"/>
                 <polygon points="500,150 485,140 485,160" class="arrow-head"/>
                 <path d="M 600 150 L 900 150" class="arrow-line"/>
@@ -345,17 +330,8 @@
 </section>
 
 <style>
-    .process-wrapper {
-        position: relative;
-        margin-top: 50px;
-    }
-
-    .process-grid {
-        display: grid;
-        gap: 40px 30px;
-        position: relative;
-        z-index: 2;
-    }
+    .process-wrapper { position: relative; margin-top: 50px; }
+    .process-grid { display: grid; gap: 40px 30px; position: relative; z-index: 2; }
 
     /* Десктоп – 4 колонки */
     @media (min-width: 992px) {
@@ -383,9 +359,9 @@
         .process-grid .step:nth-child(8) { grid-column: 2; grid-row: 3; }
     }
 
-    /* Мобільний – змейка по 2 колонки */
+    /* Мобильный – змейка по 2 колонки */
     @media (max-width: 767.98px) {
-        .process-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .process-grid { grid-template-columns: repeat(2, 1fr); gap: 35px; }
         .process-grid .step:nth-child(1) { grid-column: 1; grid-row: 1; }
         .process-grid .step:nth-child(2) { grid-column: 2; grid-row: 1; }
         .process-grid .step:nth-child(3) { grid-column: 2; grid-row: 2; }
@@ -409,46 +385,8 @@
 
     .step:hover { transform: translateY(-10px); }
 
-    /* CSS-стрелки между блоками (работают на всех устройствах) */
-    .step:not(:last-child)::after {
-        content: '→';
-        position: absolute;
-        font-size: 40px;
-        color: var(--bs-primary);
-        opacity: 0.6;
-        z-index: 3;
-        animation: pulse 2s infinite;
-    }
-
-    /* Направление стрелок в зависимости от следующего блока */
-    @media (min-width: 992px) {
-        .step:nth-child(1)::after { top: 50%; right: -50px; transform: translateY(-50%) rotate(0deg); }
-        .step:nth-child(2)::after { top: 50%; right: -50px; transform: translateY(-50%) rotate(0deg); }
-        .step:nth-child(3)::after { top: 50%; right: -50px; transform: translateY(-50%) rotate(0deg); }
-        .step:nth-child(4)::after { bottom: -50px; left: 50%; transform: translateX(-50%) rotate(90deg); }
-        .step:nth-child(5)::after { top: 50%; left: -50px; transform: translateY(-50%) rotate(180deg); }
-        .step:nth-child(6)::after { top: 50%; left: -50px; transform: translateY(-50%) rotate(180deg); }
-        .step:nth-child(7)::after { top: 50%; left: -50px; transform: translateY(-50%) rotate(180deg); }
-    }
-
-    @media (max-width: 991.98px) {
-        .step:nth-child(odd):not(:nth-child(8))::after { bottom: -40px; left: 50%; transform: translateX(-50%) rotate(90deg); }
-        .step:nth-child(even):not(:nth-child(8))::after { top: -40px; left: 50%; transform: translateX(-50%) rotate(-90deg); }
-        .step:nth-child(8)::after { display: none; }
-    }
-
-    @keyframes pulse {
-        0%, 100% { opacity: 0.4; }
-        50% { opacity: 0.8; }
-    }
-
-    /* Остальные стили (иконки, текст и т.д.) */
-    .step-number {
-        width: 50px; height: 50px; background: var(--bs-primary); color: white;
-        border-radius: 50%; line-height: 50px; font-weight: bold; font-size: 20px;
-        margin: 0 auto 15px;
-    }
-
+    /* Базовые размеры */
+    .step-number { width: 50px; height: 50px; background: var(--bs-primary); color: white; border-radius: 50%; line-height: 50px; font-weight: bold; font-size: 20px; margin: 0 auto 15px; }
     .step-icon { font-size: 50px; color: var(--bs-primary); margin-bottom: 20px; }
     .step-title { font-size: 20px; font-weight: 700; color: white; margin-bottom: 12px; }
     .step-desc { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.6; }
@@ -459,29 +397,20 @@
         .step-icon { font-size: 40px; }
         .step-title { font-size: 18px; }
         .step-desc { font-size: 14px; }
-        .step:not(:last-child)::after { font-size: 30px; }
     }
 
-    /* SVG только на десктопе */
-    .desktop-only { display: block; }
-    @media (max-width: 991.98px) { .desktop-only { display: none; } }
-
-    .process-arrows {
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        pointer-events: none; z-index: 1;
-    }
-
-    .arrow-line {
-        stroke: #0d6efd; stroke-width: 4; fill: none;
-        stroke-dasharray: 1000; stroke-dashoffset: 1000;
-        animation: draw 2s ease forwards;
-    }
-
-    .arrow-head { fill: #0d6efd; animation: draw 2s ease forwards; }
-
-    @keyframes draw { to { stroke-dashoffset: 0; } }
-</style>
-<!-- Як ми працюємо – змейка + стрелки на всех устройствах End -->
+    /* === CSS-стрелки ТОЛЬКО на мобильных и планшетах (<992px) === */
+    @media (max-width: 991.98px) {
+        .step:not(:nth-child(8))::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            border-top: 6px solid var(--bs-primary);
+            border-right: 6px solid var(--bs-primary);
+            opacity: 0.7;
+            z
 
 
 
