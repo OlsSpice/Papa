@@ -554,3 +554,18 @@ h6,
 strong {
     color: #2c3e50;
 }
+
+/* Улучшения для hero на десктопе */
+@media (min-width: 992px) {
+    .carousel-caption h5 {
+        font-size: 2.5rem !important;
+        letter-spacing: 2px;
+    }
+    .carousel-caption h1 {
+        font-size: 4.5rem !important;
+        line-height: 1.2;
+    }
+    .carousel-caption h1 span.fs-3 {
+        font-size: 2.5rem !important;
+    }
+}
