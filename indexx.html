@@ -45,15 +45,12 @@
 	<!-- jQuery (требуется для кода) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Matter.js и плагины (физика для частиц) -->
-<script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/matter-wrap@1.0.0/build/matter-wrap.min.js"></script>
+
+
 	
 </head>
 
 <body>
-	<div id="wrapper-canvas"></div>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner"></div>
@@ -338,126 +335,7 @@
     </div>
 </section>
 
-<style>
-    .process-wrapper { position: relative; margin-top: 50px; }
-    .process-grid { display: grid; gap: 40px 30px; position: relative; z-index: 2; }
 
-    /* Десктоп – 4 колонки */
-    @media (min-width: 992px) {
-        .process-grid { grid-template-columns: repeat(4, 1fr); }
-        .process-grid .step:nth-child(1) { grid-column: 1; grid-row: 1; }
-        .process-grid .step:nth-child(2) { grid-column: 2; grid-row: 1; }
-        .process-grid .step:nth-child(3) { grid-column: 3; grid-row: 1; }
-        .process-grid .step:nth-child(4) { grid-column: 4; grid-row: 1; }
-        .process-grid .step:nth-child(5) { grid-column: 4; grid-row: 2; }
-        .process-grid .step:nth-child(6) { grid-column: 3; grid-row: 2; }
-        .process-grid .step:nth-child(7) { grid-column: 2; grid-row: 2; }
-        .process-grid .step:nth-child(8) { grid-column: 1; grid-row: 2; }
-    }
-
-    /* Планшет – 3 колонки */
-    @media (max-width: 991.98px) and (min-width: 768px) {
-        .process-grid { grid-template-columns: repeat(3, 1fr); }
-        .process-grid .step:nth-child(1) { grid-column: 1; grid-row: 1; }
-        .process-grid .step:nth-child(2) { grid-column: 2; grid-row: 1; }
-        .process-grid .step:nth-child(3) { grid-column: 3; grid-row: 1; }
-        .process-grid .step:nth-child(4) { grid-column: 3; grid-row: 2; }
-        .process-grid .step:nth-child(5) { grid-column: 2; grid-row: 2; }
-        .process-grid .step:nth-child(6) { grid-column: 1; grid-row: 2; }
-        .process-grid .step:nth-child(7) { grid-column: 1; grid-row: 3; }
-        .process-grid .step:nth-child(8) { grid-column: 2; grid-row: 3; }
-    }
-
-    /* Мобильный – змейка по 2 колонки */
-    @media (max-width: 767.98px) {
-        .process-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-        .process-grid .step:nth-child(1) { grid-column: 1; grid-row: 1; }
-        .process-grid .step:nth-child(2) { grid-column: 2; grid-row: 1; }
-        .process-grid .step:nth-child(3) { grid-column: 2; grid-row: 2; }
-        .process-grid .step:nth-child(4) { grid-column: 1; grid-row: 2; }
-        .process-grid .step:nth-child(5) { grid-column: 1; grid-row: 3; }
-        .process-grid .step:nth-child(6) { grid-column: 2; grid-row: 3; }
-        .process-grid .step:nth-child(7) { grid-column: 2; grid-row: 4; }
-        .process-grid .step:nth-child(8) { grid-column: 1; grid-row: 4; }
-    }
-
-    .step {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 35px 20px;
-        text-align: center;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        transition: transform 0.4s ease;
-        position: relative;
-    }
-
-    .step:hover { transform: translateY(-10px); }
-
-    .step-number { width: 50px; height: 50px; background: var(--bs-primary); color: white; border-radius: 50%; line-height: 50px; font-weight: bold; font-size: 20px; margin: 0 auto 15px; }
-    .step-icon { font-size: 50px; color: var(--bs-primary); margin-bottom: 20px; }
-    .step-title { font-size: 20px; font-weight: 700; color: white; margin-bottom: 12px; }
-    .step-desc { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.6; }
-
-    @media (max-width: 767.98px) {
-        .step { padding: 30px 15px; }
-        .step-number { width: 40px; height: 40px; line-height: 40px; font-size: 18px; }
-        .step-icon { font-size: 40px; }
-        .step-title { font-size: 18px; }
-        .step-desc { font-size: 14px; }
-    }
-
-    /* CSS-стрелки только на мобильных/планшетах */
-    @media (max-width: 991.98px) {
-        .step:not(:nth-child(8))::after {
-            content: '➔';
-            position: absolute;
-            font-size: 36px;
-            color: var(--bs-primary);
-            opacity: 0.8;
-            z-index: 3;
-        }
-
-        /* 1 → 2 (вправо) */
-        .step:nth-child(1)::after { top: 50%; right: -40px; transform: translateY(-50%); }
-
-        /* 2 → 3 (вниз) */
-        .step:nth-child(2)::after { bottom: -40px; left: 50%; transform: translateX(-50%) rotate(90deg); }
-
-        /* 3 → 4 (влево) */
-        .step:nth-child(3)::after { top: 50%; left: -40px; transform: translateY(-50%) rotate(180deg); }
-
-        /* 4 → 5 (вниз) */
-        .step:nth-child(4)::after { bottom: -40px; left: 50%; transform: translateX(-50%) rotate(90deg); }
-
-        /* 5 → 6 (вправо) */
-        .step:nth-child(5)::after { top: 50%; right: -40px; transform: translateY(-50%); }
-
-        /* 6 → 7 (вниз) */
-        .step:nth-child(6)::after { bottom: -40px; left: 50%; transform: translateX(-50%) rotate(90deg); }
-
-        /* 7 → 8 (влево) */
-        .step:nth-child(7)::after { top: 50%; left: -40px; transform: translateY(-50%) rotate(180deg); }
-    }
-
-    /* SVG только на десктопе */
-    .desktop-only { display: block; }
-    @media (max-width: 991.98px) { .desktop-only { display: none; } }
-
-    .process-arrows {
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;
-    }
-
-    .arrow-line {
-        stroke: #0d6efd; stroke-width: 4; fill: none;
-        stroke-dasharray: 1000; stroke-dashoffset: 1000;
-        animation: draw 2s ease forwards;
-    }
-
-    .arrow-head { fill: #0d6efd; animation: draw 2s ease forwards; }
-
-    @keyframes draw { to { stroke-dashoffset: 0; } }
-</style>
 <!-- Як ми працюємо – рабочая версия End -->
 
 	
@@ -853,73 +731,7 @@
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
-
-
-    <!-- Team Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Team Members</h5>
-                <h1 class="mb-0">Professional Stuffs Ready to Help Your Business</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Full Name</h4>
-                            <p class="text-uppercase m-0">Designation</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Full Name</h4>
-                            <p class="text-uppercase m-0">Designation</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Full Name</h4>
-                            <p class="text-uppercase m-0">Designation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Team End -->
-
+    
 
     <!-- Blog Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -1125,6 +937,19 @@
         </div>
     </div>
     <!-- Footer End -->
+	<!-- Анімований хвильовий фон Start -->
+<div class="waveWrapper waveAnimation">
+  <div class="waveWrapperInner bgTop">
+    <div class="wave waveTop" style="background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.08%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4h-2v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+  <div class="waveWrapperInner bgMiddle">
+    <div class="wave waveMiddle" style="background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.06%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4h-2v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+  <div class="waveWrapperInner bgBottom">
+    <div class="wave waveBottom" style="background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.04%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4h-2v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+</div>
+<!-- Анімований хвильовий фон End -->
 
 
     <!-- Back to Top -->
