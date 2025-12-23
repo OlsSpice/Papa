@@ -579,9 +579,6 @@ strong {
 body{
     font-family: 'Exo', sans-serif;
 }
-body {
-  background: #ffffff !important;
-}
 
 
 .context {
@@ -720,4 +717,30 @@ body {
         border-radius: 50%;
     }
 
+}
+/* Перекрываем все темные фоны */
+.container-fluid,
+.bg-dark,
+.bg-primary,
+.facts,
+section {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+/* Если navbar темный — сделайте его светлым */
+.navbar-dark {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: #333 !important;
+}
+
+/* Кнопки и акценты оставьте синими */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }
