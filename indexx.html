@@ -42,10 +42,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-
-
-
 	
 </head>
 
@@ -334,7 +330,126 @@
     </div>
 </section>
 
+<style>
+    .process-wrapper { position: relative; margin-top: 50px; }
+    .process-grid { display: grid; gap: 40px 30px; position: relative; z-index: 2; }
 
+    /* Десктоп – 4 колонки */
+    @media (min-width: 992px) {
+        .process-grid { grid-template-columns: repeat(4, 1fr); }
+        .process-grid .step:nth-child(1) { grid-column: 1; grid-row: 1; }
+        .process-grid .step:nth-child(2) { grid-column: 2; grid-row: 1; }
+        .process-grid .step:nth-child(3) { grid-column: 3; grid-row: 1; }
+        .process-grid .step:nth-child(4) { grid-column: 4; grid-row: 1; }
+        .process-grid .step:nth-child(5) { grid-column: 4; grid-row: 2; }
+        .process-grid .step:nth-child(6) { grid-column: 3; grid-row: 2; }
+        .process-grid .step:nth-child(7) { grid-column: 2; grid-row: 2; }
+        .process-grid .step:nth-child(8) { grid-column: 1; grid-row: 2; }
+    }
+
+    /* Планшет – 3 колонки */
+    @media (max-width: 991.98px) and (min-width: 768px) {
+        .process-grid { grid-template-columns: repeat(3, 1fr); }
+        .process-grid .step:nth-child(1) { grid-column: 1; grid-row: 1; }
+        .process-grid .step:nth-child(2) { grid-column: 2; grid-row: 1; }
+        .process-grid .step:nth-child(3) { grid-column: 3; grid-row: 1; }
+        .process-grid .step:nth-child(4) { grid-column: 3; grid-row: 2; }
+        .process-grid .step:nth-child(5) { grid-column: 2; grid-row: 2; }
+        .process-grid .step:nth-child(6) { grid-column: 1; grid-row: 2; }
+        .process-grid .step:nth-child(7) { grid-column: 1; grid-row: 3; }
+        .process-grid .step:nth-child(8) { grid-column: 2; grid-row: 3; }
+    }
+
+    /* Мобильный – змейка по 2 колонки */
+    @media (max-width: 767.98px) {
+        .process-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        .process-grid .step:nth-child(1) { grid-column: 1; grid-row: 1; }
+        .process-grid .step:nth-child(2) { grid-column: 2; grid-row: 1; }
+        .process-grid .step:nth-child(3) { grid-column: 2; grid-row: 2; }
+        .process-grid .step:nth-child(4) { grid-column: 1; grid-row: 2; }
+        .process-grid .step:nth-child(5) { grid-column: 1; grid-row: 3; }
+        .process-grid .step:nth-child(6) { grid-column: 2; grid-row: 3; }
+        .process-grid .step:nth-child(7) { grid-column: 2; grid-row: 4; }
+        .process-grid .step:nth-child(8) { grid-column: 1; grid-row: 4; }
+    }
+
+    .step {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 35px 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s ease;
+        position: relative;
+    }
+
+    .step:hover { transform: translateY(-10px); }
+
+    .step-number { width: 50px; height: 50px; background: var(--bs-primary); color: white; border-radius: 50%; line-height: 50px; font-weight: bold; font-size: 20px; margin: 0 auto 15px; }
+    .step-icon { font-size: 50px; color: var(--bs-primary); margin-bottom: 20px; }
+    .step-title { font-size: 20px; font-weight: 700; color: white; margin-bottom: 12px; }
+    .step-desc { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.6; }
+
+    @media (max-width: 767.98px) {
+        .step { padding: 30px 15px; }
+        .step-number { width: 40px; height: 40px; line-height: 40px; font-size: 18px; }
+        .step-icon { font-size: 40px; }
+        .step-title { font-size: 18px; }
+        .step-desc { font-size: 14px; }
+    }
+
+    /* CSS-стрелки только на мобильных/планшетах */
+    @media (max-width: 991.98px) {
+        .step:not(:nth-child(8))::after {
+            content: '➔';
+            position: absolute;
+            font-size: 36px;
+            color: var(--bs-primary);
+            opacity: 0.8;
+            z-index: 3;
+        }
+
+        /* 1 → 2 (вправо) */
+        .step:nth-child(1)::after { top: 50%; right: -40px; transform: translateY(-50%); }
+
+        /* 2 → 3 (вниз) */
+        .step:nth-child(2)::after { bottom: -40px; left: 50%; transform: translateX(-50%) rotate(90deg); }
+
+        /* 3 → 4 (влево) */
+        .step:nth-child(3)::after { top: 50%; left: -40px; transform: translateY(-50%) rotate(180deg); }
+
+        /* 4 → 5 (вниз) */
+        .step:nth-child(4)::after { bottom: -40px; left: 50%; transform: translateX(-50%) rotate(90deg); }
+
+        /* 5 → 6 (вправо) */
+        .step:nth-child(5)::after { top: 50%; right: -40px; transform: translateY(-50%); }
+
+        /* 6 → 7 (вниз) */
+        .step:nth-child(6)::after { bottom: -40px; left: 50%; transform: translateX(-50%) rotate(90deg); }
+
+        /* 7 → 8 (влево) */
+        .step:nth-child(7)::after { top: 50%; left: -40px; transform: translateY(-50%) rotate(180deg); }
+    }
+
+    /* SVG только на десктопе */
+    .desktop-only { display: block; }
+    @media (max-width: 991.98px) { .desktop-only { display: none; } }
+
+    .process-arrows {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;
+    }
+
+    .arrow-line {
+        stroke: #0d6efd; stroke-width: 4; fill: none;
+        stroke-dasharray: 1000; stroke-dashoffset: 1000;
+        animation: draw 2s ease forwards;
+    }
+
+    .arrow-head { fill: #0d6efd; animation: draw 2s ease forwards; }
+
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+</style>
 <!-- Як ми працюємо – рабочая версия End -->
 
 	
@@ -730,7 +845,73 @@
             </div>
         </div>
     </div>
-    
+    <!-- Testimonial End -->
+
+
+    <!-- Team Start -->
+    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Team Members</h5>
+                <h1 class="mb-0">Professional Stuffs Ready to Help Your Business</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Full Name</h4>
+                            <p class="text-uppercase m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Full Name</h4>
+                            <p class="text-uppercase m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Full Name</h4>
+                            <p class="text-uppercase m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+
 
     <!-- Blog Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -936,6 +1117,7 @@
         </div>
     </div>
     <!-- Footer End -->
+	
 	<!-- Анімований хвильовий фон Start -->
 <div class="waveWrapper waveAnimation">
   <div class="waveWrapperInner bgTop">
@@ -966,206 +1148,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-	<script>
-    var canvas = $("#wrapper-canvas").get(0);
-
-    var dimensions = {
-      width: $(window).width(),
-      height: $(window).height()
-    };
-
-    Matter.use('matter-attractors');
-    Matter.use('matter-wrap');
-
-    function runMatter(){
-        // module aliases
-        var Engine = Matter.Engine,
-            Events = Matter.Events,
-            Runner = Matter.Runner,
-            Render = Matter.Render,
-            World = Matter.World,
-            Body = Matter.Body,
-            Mouse = Matter.Mouse,
-            Common = Matter.Common,
-            Bodies = Matter.Bodies;
-
-        // create engine
-        var engine = Engine.create();
-
-        engine.world.gravity.y = 0
-        engine.world.gravity.x = 0
-        engine.world.gravity.scale = 0.1
-
-        // create renderer
-        var render = Render.create({
-          element: canvas,
-          engine: engine,
-          options: {
-            showVelocity: false,
-            width: dimensions.width,
-            height: dimensions.height,
-            wireframes: false,
-            background: 'rgb(240,240,240)'
-          }
-        });
-
-        // create runner
-        var runner = Runner.create();
-
-        // create demo scene
-        var world = engine.world;
-        world.gravity.scale = 0;
-
-        // create a body with an attractor
-        var attractiveBody = Bodies.circle(
-          render.options.width / 2,
-          render.options.height / 2,
-          (Math.max(dimensions.width / 4, dimensions.height / 4)) / 2,
-          {
-            render: {
-              fillStyle: `rgb(240,240,240)`,
-              strokeStyle: `rgb(240,240,240)`,
-              lineWidth: 0
-            },
-            isStatic: true,
-            plugin: {
-              attractors: [
-                function(bodyA, bodyB) {
-                  return {
-                    x: (bodyA.position.x - bodyB.position.x) * 1e-6,
-                    y: (bodyA.position.y - bodyB.position.y) * 1e-6,
-                  };
-                }
-              ]
-            }
-          });
-
-        World.add(world, attractiveBody);
-
-        // add some bodies that to be attracted
-        for (var i = 0; i < 60; i += 1) {
-          let x = Common.random(0, render.options.width);
-          let y = Common.random(0, render.options.height);
-          let s = Common.random() > 0.6 ? Common.random(10, 80) : Common.random(4, 60);
-          let poligonNumber= Common.random(3, 6);
-          var body = Bodies.polygon(
-            x,y,
-            poligonNumber,
-            s,
-
-            {
-              mass: s / 20,
-              friction: 0,
-              frictionAir: 0.02,
-              angle: Math.round(Math.random() * 360),
-              render: {
-                fillStyle: '#FFFFFF',
-                strokeStyle: `#DDDDDD`,
-                lineWidth: 2
-              }
-            }
-          );
-
-          World.add(world, body);
-
-          let r = Common.random(0,1)
-          var circle = Bodies.circle(x, y, Common.random(2, 8), {
-                mass: 0.1,
-                friction: 0,
-                frictionAir: 0.01,
-                render: {
-                  fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(240,240,240)`,
-                  strokeStyle: `#E9202E`,
-                  lineWidth: 2
-                }
-              });
-          World.add(world, circle);
-
-          var circle = Bodies.circle(x, y, Common.random(2, 20), {
-                mass: 6,
-                friction: 0,
-                frictionAir: 0,
-                render: {
-                  fillStyle: r > 0.3 ? `#4267F8` : `rgb(240,240,240)`,
-                  strokeStyle: `#3257E8`,
-                  lineWidth: 4
-                }
-              });
-          World.add(world, circle);
-
-          var circle = Bodies.circle(x, y, Common.random(2, 30), {
-                mass: 0.2,
-                friction: 0.6,
-                frictionAir: 0.8,
-                render: {
-                  fillStyle: `rgb(240,240,240)`,
-                  strokeStyle: `#FFFFFF`,
-                  lineWidth: 3}
-              });
-          World.add(world, circle);
-        }
-
-        // add mouse control
-        var mouse = Mouse.create(render.canvas);
-
-        Events.on(engine, 'afterUpdate', function() {
-            if (!mouse.position.x) return;
-            // smoothly move the attractor body towards the mouse
-            Body.translate(attractiveBody, {
-                x: (mouse.position.x - attractiveBody.position.x) * 0.12,
-                y: (mouse.position.y - attractiveBody.position.y) * 0.12
-            });
-        });
-
-        // return a context for MatterDemo to control
-        let data = {
-          engine: engine,
-          runner: runner,
-          render: render,
-          canvas: render.canvas,
-          stop: function() {
-            Matter.Render.stop(render);
-            Matter.Runner.stop(runner);
-          },
-          play: function(){
-            Matter.Runner.run(runner, engine);
-            Matter.Render.run(render);
-          }
-        };
-        Matter.Runner.run(runner, engine);
-        Matter.Render.run(render);
-        return data;
-    }
-
-    function debounce(func, wait, immediate) {
-      var timeout;
-      return function() {
-        var context = this, args = arguments;
-        var later = function() {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-      };
-    };
-
-    function setWindowSize(){
-      let dimensions = {};
-          dimensions.width  = $(window).width();
-          dimensions.height = $(window).height();
-
-      m.render.canvas.width = $(window).width();
-      m.render.canvas.height = $(window).height();
-      return dimensions;
-    }
-
-    let m = runMatter()
-    setWindowSize()
-    $(window).resize(debounce(setWindowSize, 250))
-</script>
 
     <!-- Firebase -->
 	
