@@ -569,101 +569,152 @@ strong {
         font-size: 2.5rem !important;
     }
 }
-/* Хвильовий фон тільки внизу сторінки */
-.waveWrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 400px; /* Висота хвиль – можна змінити */
-  overflow: hidden;
-  z-index: 1; /* Вище футера, але нижче контенту */
-  pointer-events: none;
-  width: 100%;
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
-.waveWrapperInner {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  bottom: -1px;
-  background-image: linear-gradient(to top, #061429 20%, rgba(6,20,41,0.8) 80%);
+body{
+    font-family: 'Exo', sans-serif;
 }
 
-.bgTop { z-index: 15; opacity: 0.5; }
-.bgMiddle { z-index: 10; opacity: 0.75; }
-.bgBottom { z-index: 5; }
 
-.wave {
-  position: absolute;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background-repeat: repeat no-repeat;
-  background-position: 0 bottom;
-  transform-origin: center bottom;
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
 }
 
-.waveTop { background-size: 50% 120px; }
-.waveAnimation .waveTop { animation: move-wave 10s linear infinite; }
-
-.waveMiddle { background-size: 50% 140px; animation: move-wave 15s linear infinite; }
-
-.waveBottom { background-size: 50% 110px; animation: move-wave 20s linear infinite; }
-
-@keyframes move-wave {
-  0% { transform: translateX(0) translateZ(0) scaleY(1); }
-  50% { transform: translateX(-25%) translateZ(0) scaleY(0.55); }
-  100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
-}
-#animated-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #061429; /* твій темний фон */
-  overflow: hidden;
-  z-index: -2;
-  pointer-events: none;
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
 }
 
-#animated-bg::before,
-#animated-bg::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 50%);
-  animation: float 20s infinite ease-in-out;
-  opacity: 0.3;
+
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    
+   
 }
 
-#animated-bg::after {
-  animation-delay: 10s;
-  background: radial-gradient(circle at 30% 70%, rgba(13,110,253,0.08) 0%, transparent 50%);
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-#animated-bg span {
-  position: absolute;
-  background: rgba(13,110,253,0.4);
-  border-radius: 50%;
-  opacity: 0.6;
-  animation: float 15s infinite linear;
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
 }
 
-#animated-bg span:nth-child(1) { width: 80px; height: 80px; left: 10%; top: 20%; animation-duration: 18s; }
-#animated-bg span:nth-child(2) { width: 60px; height: 60px; left: 30%; top: 50%; animation-duration: 22s; }
-#animated-bg span:nth-child(3) { width: 100px; height: 100px; left: 60%; top: 10%; animation-duration: 25s; }
-#animated-bg span:nth-child(4) { width: 50px; height: 50px; left: 80%; top: 70%; animation-duration: 20s; }
-#animated-bg span:nth-child(5) { width: 70px; height: 70px; left: 40%; top: 80%; animation-duration: 16s; }
-#animated-bg span:nth-child(6) { width: 90px; height: 90px; left: 70%; top: 30%; animation-duration: 21s; }
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
 
-@keyframes float {
-  0%   { transform: translateY(0) translateX(0); }
-  25%  { transform: translateY(-30px) translateX(20px); }
-  50%  { transform: translateY(0) translateX(40px); }
-  75%  { transform: translateY(30px) translateX(20px); }
-  100% { transform: translateY(0) translateX(0); }
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
 }
