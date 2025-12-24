@@ -216,7 +216,60 @@
         </div>
     </div>
 </div>
+<!-- 4. Фото/відео оператор (ВАРИАНТ — ультра-прозрачный glassmorphism) -->
+<div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.6s">
+    <div class="rounded h-100 d-flex flex-column overflow-hidden shadow-xl"
+         style="
+            background: rgba(12, 12, 25, 0.68);            /* очень прозрачный тёмный фон */
+            backdrop-filter: blur(16px);                   /* сильное размытие — ключевой эффект */
+            -webkit-backdrop-filter: blur(16px);           /* для Safari/iOS */
+            border: 1px solid rgba(255,255,255,0.09);      /* лёгкая светлая граница */
+            border-radius: 20px;                           /* чуть мягче углы */
+         ">
 
+        <!-- Видео-превью -->
+        <div class="border-bottom py-4 px-5 mb-4" style="border-color: rgba(255,255,255,0.12) !important;">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview position-relative"
+                 style="background-image: url('https://img.youtube.com/vi/9fHh1ArOv2E/maxresdefault.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                
+                <div class="position-absolute top-50 start-50 translate-middle z-3 play-button">
+                    <div class="bg-dark bg-opacity-55 rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                         style="width: 80px; height: 80px; backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.3);">
+                        <i class="fa fa-play text-white fs-3 ms-2"></i>
+                    </div>
+                </div>
+
+                <iframe class="lazy-iframe position-absolute top-0 start-0 w-100 h-100 border-0 rounded-4" 
+                        data-src="https://www.youtube.com/embed/9fHh1ArOv2E?rel=0&modestbranding=1&autoplay=1" 
+                        allowfullscreen allow="autoplay"
+                        frameborder="0" style="display:none;"></iframe>
+            </div>
+
+            <!-- Название оставляем оригинальным цветом -->
+            <h4 class="text-primary mb-1 fw-bold">Фото або відеоператор</h4>
+            <small class="text-white text-uppercase opacity-70">Під вашу задачу</small>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+            <h1 class="display-5 mb-4 text-white">
+                <small class="align-top" style="font-size: 22px; line-height: 45px;">₴</small>2500
+                <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Година</small>
+            </h1>
+            
+            <div class="d-flex justify-content-between mb-4 text-white opacity-85">
+                <span>Зйомка 4к або FHD</span>
+                <i class="fa fa-check text-info pt-1"></i>
+            </div>
+
+            <a href="#quote" 
+               class="btn btn-primary py-3 px-4 mt-auto w-100 fw-bold"
+               style="background: linear-gradient(90deg, #00d4ff, #7c3aed); border: none; transition: all 0.3s;">
+               Замовити
+            </a>
+        </div>
+    </div>
+</div>
 <!-- 2. Youtube продакшн — кнопка теперь точно такого же размера как первая -->
 <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.9s">
     <div class="bg-white rounded shadow position-relative h-100 d-flex flex-column" style="z-index: 1;">
