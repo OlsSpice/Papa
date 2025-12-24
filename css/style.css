@@ -699,3 +699,55 @@ strong {
 .service-card .btn {
     pointer-events: none; /* кнопка не клікабельна, бо весь блок вже веде за посиланням */
 }
+/* Мобільна версія каруселі — додаємо повітря зверху та знизу */
+@media (max-width: 991.98px) {
+    .carousel-item {
+        min-height: 70vh;                   /* гарантуємо, що слайд не "приплюснутий" */
+    }
+
+    .carousel-caption {
+        padding: 4rem 1.5rem 5rem !important;  /* зверху 4rem, знизу 5rem — найважливіше */
+        top: auto !important;
+        bottom: auto !important;
+        transform: translateY(0);           /* прибираємо можливе зміщення */
+    }
+
+    .carousel-caption .p-3 {
+        padding: 2rem 1.5rem !important;    /* внутрішній контейнер тексту */
+        background: rgba(0, 0, 0, 0.45);    /* легкий фон для кращого читання (опціонально) */
+        border-radius: 16px;
+    }
+
+    .carousel-caption h5 {
+        margin-bottom: 1.2rem !important;
+        font-size: 1.3rem !important;
+    }
+
+    .carousel-caption h1 {
+        margin: 0.8rem 0 1.8rem !important;
+        font-size: 2.1rem !important;
+        line-height: 1.15;
+    }
+
+    .carousel-caption h1 span.fs-3 {
+        font-size: 1.4rem !important;
+    }
+
+    .carousel-caption .btn {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 1rem !important;
+        margin: 0.5rem 0.4rem !important;   /* невеликий простір між кнопками */
+    }
+}
+
+/* Дуже маленькі екрани (iPhone SE, старі Android тощо) */
+@media (max-width: 576px) {
+    .carousel-caption {
+        padding: 3.5rem 1.2rem 4.5rem !important;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.9rem !important;
+    }
+}
+
