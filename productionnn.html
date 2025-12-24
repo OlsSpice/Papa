@@ -301,6 +301,60 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- 4. Фото/відео оператор (ВАРИАНТ 1 — тёмный полупрозрачный фон) -->
+<div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.6s">
+    <div class="rounded h-100 d-flex flex-column overflow-hidden shadow-lg"
+         style="
+            background: rgba(10, 10, 20, 0.82);           /* основной тёмный полупрозрачный фон */
+            backdrop-filter: blur(10px);                   /* эффект матового стекла — очень красиво на вашем фоне */
+            -webkit-backdrop-filter: blur(10px);           /* для Safari */
+            border: 1px solid rgba(255,255,255,0.08);      /* тонкая светлая обводка */
+            border-radius: 16px;
+         ">
+
+        <!-- Видео-превью (оставляем как было, но можно сделать чуть темнее) -->
+        <div class="border-bottom py-4 px-5 mb-4" style="border-color: rgba(255,255,255,0.1) !important;">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 youtube-preview position-relative"
+                 style="background-image: url('https://img.youtube.com/vi/9fHh1ArOv2E/maxresdefault.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                
+                <div class="position-absolute top-50 start-50 translate-middle z-3 play-button">
+                    <div class="bg-dark bg-opacity-60 rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                         style="width: 80px; height: 80px; backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.25);">
+                        <i class="fa fa-play text-white fs-3 ms-2"></i>
+                    </div>
+                </div>
+
+                <iframe class="lazy-iframe position-absolute top-0 start-0 w-100 h-100 border-0 rounded-4" 
+                        data-src="https://www.youtube.com/embed/9fHh1ArOv2E?rel=0&modestbranding=1&autoplay=1" 
+                        allowfullscreen allow="autoplay"
+                        frameborder="0" style="display:none;"></iframe>
+            </div>
+
+            <h4 class="text-white mb-1 fw-bold">Фото або відеоператор</h4>
+            <small class="text-white text-uppercase opacity-75">Під вашу задачу</small>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="p-5 pt-0 flex-grow-1 d-flex flex-column">
+            <h1 class="display-5 mb-4 text-white">
+                <small class="align-top" style="font-size: 22px; line-height: 45px;">₴</small>2500
+                <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Година</small>
+            </h1>
+            
+            <div class="d-flex justify-content-between mb-4 text-white opacity-90">
+                <span>Зйомка 4к або FHD</span>
+                <i class="fa fa-check text-info pt-1"></i>   <!-- неоново-голубой акцент -->
+            </div>
+
+            <a href="#quote" 
+               class="btn btn-primary py-3 px-4 mt-auto w-100 fw-bold"
+               style="background: linear-gradient(90deg, #00d4ff, #7c3aed); border: none; transition: all 0.3s;">
+               Замовити
+            </a>
+        </div>
+    </div>
+</div>
 
             <!-- 25 креативів для SMM -->
             <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.9s">
