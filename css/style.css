@@ -751,3 +751,42 @@ strong {
     }
 }
 
+/* Виправляємо стрілки в блоці "Як ми працюємо" на мобільних */
+@media (max-width: 991.98px) {
+    /* 1. Ховаємо SVG-стрілки на мобілках — вони не адаптовані */
+    .process-arrows.desktop-only {
+        display: none !important;
+    }
+
+    /* 2. Показуємо та налаштовуємо текстові стрілки */
+    .step:not(:nth-child(8))::after {
+        display: block !important;           /* на всяк випадок */
+        content: '➔' !important;
+        position: absolute;
+        font-size: 32px;                     /* трохи менший розмір для компактності */
+        color: #ffffff;
+        opacity: 0.9;
+        font-weight: bold;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    /* Корекція позиціонування для різних кроків */
+    .step:nth-child(1)::after { right: -35px; top: 50%; transform: translateY(-50%); }
+    .step:nth-child(2)::after { bottom: -35px; left: 50%; transform: translateX(-50%) rotate(90deg); }
+    .step:nth-child(3)::after { left: -35px;  top: 50%; transform: translateY(-50%) rotate(180deg); }
+    .step:nth-child(4)::after { bottom: -35px; left: 50%; transform: translateX(-50%) rotate(90deg); }
+    .step:nth-child(5)::after { right: -35px; top: 50%; transform: translateY(-50%); }
+    .step:nth-child(6)::after { bottom: -35px; left: 50%; transform: translateX(-50%) rotate(90deg); }
+    .step:nth-child(7)::after { left: -35px;  top: 50%; transform: translateY(-50%) rotate(180deg); }
+
+    /* На дуже маленьких екранах (≤ 480px) робимо стрілки ще компактнішими */
+    @media (max-width: 480px) {
+        .step:not(:nth-child(8))::after {
+            font-size: 28px;
+        }
+        .step:nth-child(1)::after, .step:nth-child(5)::after { right: -28px; }
+        .step:nth-child(3)::after, .step:nth-child(7)::after { left: -28px; }
+        .step:nth-child(2)::after, .step:nth-child(4)::after, .step:nth-child(6)::after { bottom: -28px; }
+    }
+}
