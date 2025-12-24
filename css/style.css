@@ -689,3 +689,13 @@ strong {
         border-radius: 50%;
     }
 }
+
+.service-card:hover .rounded {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.3s ease;
+}
+
+.service-card .btn {
+    pointer-events: none; /* кнопка не клікабельна, бо весь блок вже веде за посиланням */
+}
