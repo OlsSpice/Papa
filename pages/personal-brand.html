@@ -1,156 +1,356 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="utf-8">
-    <title>Особистий Бренд | Paparazzi</title>
+    <title>Paparazzi - Блог про Відеомаркетинг</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-   <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/logos/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/assets/logos/android-chrome-512x512.png">
-<link rel="manifest" href="/assets/logos/site.webmanifest">
-<link rel="icon" href="/assets/logos/favicon.ico">
+    <meta content="Відеопродакшен, Маркетинг, SMM, Блог, Воронки продажів" name="keywords">
+    <meta content="Корисні статті про відеопродакшен та маркетинг в Україні від Paparazzi" name="description">
 
-    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/logos/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/logos/android-chrome-512x512.png">
+    <link rel="manifest" href="/assets/logos/site.webmanifest">
+    <link rel="icon" href="/assets/logos/favicon.ico">
+
+
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Topbar & Navbar (Standard) -->
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+    
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                 <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kyiv, Ukraine</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+38 095 058 08 68</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>sendpaparazzi@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://t.me/paparazzi_cam"><i class="fab fa-telegram-plane fw-normal"></i></a>
+                   <!-- Instagram -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://www.instagram.com/paparazzi.prod" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fab fa-instagram fw-normal"></i>
+                </a>
+                
+                <!-- TikTok -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://www.tiktok.com/@paparazzi.prod" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+                    <i class="fab fa-tiktok fw-normal"></i>
+                </a>
+                
+                <!-- YouTube -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://www.youtube.com/@Paparazzicam" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="fab fa-youtube fw-normal"></i>
+                </a>
+                
+                <!-- Telegram -->
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                   href="https://t.me/paparazzi_cam" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Telegram">
+                    <i class="fab fa-telegram-plane fw-normal"></i>
+                </a>
+
                 </div>
             </div>
         </div>
     </div>
+    <!-- Topbar End -->
 
+
+    <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="../index.html" class="navbar-brand p-0 me-container">
-                <img class="me-logo" src="../assets/logos/android-chrome-192x192.png" alt="Logo">
+            <a href="/index.html" class="navbar-brand p-0 me-container">
+                <img class="me-logo" src="/assets/logos/android-chrome-192x192.png" onerror="this.style.display='none'">
                 <h1 class="m-0"><i class="fa me-2"></i>Paparazzi</h1>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="fa fa-bars"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="../cases.html" class="nav-item nav-link">Кейси</a>
+                    <a href="/index.html" class="nav-item nav-link">Головна</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Послуги</a>
                         <div class="dropdown-menu m-0">
-                            <a href="../production.html" class="dropdown-item">Продакшн</a>
-                            <a href="../marketing.html" class="dropdown-item">Маркетинг</a>
-                            <a href="../digital.html" class="dropdown-item">Digital рiшення</a>
+                            <a href="/production.html" class="dropdown-item">Продакшн</a>
+                            <a href="/marketing.html" class="dropdown-item">Маркетинг</a>
+                            <a href="/digital.html" class="dropdown-item">Digital рiшення</a>
                         </div>
                     </div>
-                    <a href="../contact.html" class="nav-item nav-link">Контакти</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Блог</a>
-                        <div class="dropdown-menu m-0"><a href="../blog.html" class="dropdown-item">Статті</a></div>
-                    </div>
+                    <a href="/contact.html" class="nav-item nav-link">Контакти</a>
+                    <a href="/blog.html" class="nav-item nav-link">Блог</a>
                 </div>
-                <a href="#quote" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a>
+                <!-- ЗМІНЕНО: Кнопка Зв'язатися веде на форму внизу сторінки -->
+                <a href="#quote-form" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a>
             </div>
         </nav>
 
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">Особистий Бренд</h1>
-                    <a href="../index.html" class="h5 text-white">Головна</a> <i class="far fa-circle text-white px-2"></i> <a href="../blog.html" class="h5 text-white">Блог</a>
+                    <h1 class="display-4 text-white animated zoomIn">Блог & Корисне</h1>
+                    <a href="/index.html" class="h5 text-white">Головна</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="/blog.html" class="h5 text-white">Блог</a>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Navbar End -->
 
-    <!-- Content -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="mb-5">
-                        <img class="img-fluid w-100 rounded mb-5" src="../img/blog-6.jpg" alt="Зображення особистого бренду">
-                    </div>
-                    <h1 class="mb-4">Особистий бренд власника: Чому ховатися за логотипом більше не вигідно?</h1>
-                    <div class="bg-light p-5 rounded">
-                        <p class="lead">В Україні зараз криза довіри. Люди не вірять "успішному успіху" та безликим логотипам. Люди купують у людей. Якщо ви власник бізнесу і вас немає в кадрі — ви втрачаєте 50% конверсії.</p>
-                        
-                        <div class="row g-4 mt-4">
-                            <div class="col-md-6">
-                                <div class="bg-white p-4 rounded shadow-sm h-100">
-                                    <h4 class="text-primary">Ефект знайомого</h4>
-                                    <p class="mb-0">Коли клієнт бачить вас у Stories чи Reels щодня, ви стаєте для нього "своїм". Коли йому знадобиться ваш товар, він піде до вас.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="bg-white p-4 rounded shadow-sm h-100">
-                                    <h4 class="text-primary">Про що говорити?</h4>
-                                    <p class="mb-0">Показуйте помилки ("як ми втратили товар"), процеси ("як ми обираємо тканину") та цінності.</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <h4 class="mt-5 text-primary">3. Страх камери</h4>
-                        <p>Це нормально. Ніхто не народжується з умінням говорити на камеру. Почніть з закадрового голосу. Знімайте процеси і коментуйте їх. Потім — знімайте себе у дзеркалі.</p>
+
+<!-- Stattya Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Стаття зліва -->
+            <div class="col-lg-8">
+                <div class="mb-5">
+                    <img class="img-fluid w-100 rounded mb-5" src="../img/blog-6.jpg" alt="Особистий бренд власника 2025">
+                </div>
+
+                <h1 class="mb-4">Особистий бренд власника: Чому ховатися за логотипом більше не вигідно в 2025</h1>
+                
+                <div class="bg-light p-5 rounded">
+                    <p class="lead">В Україні зараз глибока криза довіри. Люди не вірять "успішному успіху", безликим логотипам і корпоративним текстам. Вони купують у людей — у тих, кого бачать, чують і відчувають як "своїх". Якщо ви власник бізнесу і вас немає в кадрі — ви втрачаєте 50–70% потенційної конверсії. Особистий бренд у 2025 році — це не "понти", а найдешевший і найефективніший спосіб продажу.</p>
+
+                    <h3 class="mb-3 mt-5 text-primary">Ефект "знайомого": чому люди обирають саме вас</h3>
+                    <p>Коли клієнт бачить вас у Stories, Reels чи Shorts щодня — ви стаєте для нього "своїм". Він знає ваше обличчя, голос, манеру говорити. Коли йому знадобиться ваш товар/послуга — він піде саме до вас, а не до безликого конкурента з красивим логотипом.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-check text-success me-2"></i> Регулярний особистий контент підвищує довіру на 60–80% (за даними Wyzowl 2025)</li>
+                        <li><i class="fa fa-check text-success me-2"></i> Бізнеси з обличчям власника мають в 2–3 рази вищу конверсію в ліди</li>
+                        <li><i class="fa fa-check text-success me-2"></i> Люди платять більше за "людяність" — середній чек +20–40%</li>
+                    </ul>
+
+                    <h3 class="mb-3 mt-5 text-primary">Про що говорити, щоб бути "своїм" для аудиторії</h3>
+                    <p>Не потрібно розповідати "як я став мільйонером". Покажіть справжнє життя бізнесу — це викликає найбільшу довіру.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-check text-success me-2"></i> <strong>Помилки та провали</strong>: "Як ми втратили 50 тис. грн через цю помилку" — люди люблять чесність</li>
+                        <li><i class="fa fa-check text-success me-2"></i> <strong>Процеси "внутрянка"</strong>: "Як ми обираємо тканину для суконь", "Як виглядає день власника кав'ярні"</li>
+                        <li><i class="fa fa-check text-success me-2"></i> <strong>Цінності та принципи</strong>: "Чому ми не працюємо в неділю", "Що для нас важливіше — гроші чи клієнт"</li>
+                        <li><i class="fa fa-check text-success me-2"></i> <strong>Особисте життя бізнесу</strong>: "Як я поєдную сім'ю та бізнес", "Мої ранкові ритуали перед відкриттям"</li>
+                    </ul>
+
+                    <h3 class="mb-3 mt-5 text-primary">Страх камери: як подолати за 1–2 місяці</h3>
+                    <p>Це нормально — 95% власників бояться камери спочатку. Ніхто не народжується з умінням говорити на камеру природно. Ось покроковий план, як розслабитися:</p>
+                    <ol class="ps-3">
+                        <li class="mb-3"><strong>Почніть з закадрового голосу</strong>: Знімайте процеси (як ви готуєте каву, ремонтуєте авто) і коментуйте їх голосом за кадром</li>
+                        <li class="mb-3"><strong>Знімайте себе у дзеркалі</strong>: Просто тримайте телефон перед собою — це найпростіший спосіб звикнути до свого обличчя</li>
+                        <li class="mb-3"><strong>Короткі Stories</strong>: 15 сек без монтажу — "сьогодні в нас такий день" — поступово додавайте обличчя</li>
+                        <li class="mb-3"><strong>Практика + фідбек</strong>: Знімайте 5–10 дублів щодня, переглядайте, видаляйте — через 2 тижні страх зникне</li>
+                    </ol>
+
+                    <h3 class="mb-3 mt-5 text-primary">Чек-лист для запуску особистого бренду</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-check-square text-primary me-2"></i> Виходите в кадр хоча б 3–5 разів на тиждень</li>
+                        <li><i class="fa fa-check-square text-primary me-2"></i> Розповідаєте про помилки, процеси та цінності</li>
+                        <li><i class="fa fa-check-square text-primary me-2"></i> Використовуєте натуральне світло та петличку</li>
+                        <li><i class="fa fa-check-square text-primary me-2"></i> Починаєте з коротких Stories/Reels (15–30 сек)</li>
+                        <li><i class="fa fa-check-square text-primary me-2"></i> Додаєте субтитри + заклик до дії</li>
+                        <li><i class="fa fa-check-square text-primary me-2"></i> Аналізуєте, які відео дають найбільше довіри/заявок</li>
+                    </ul>
+
+                    <div class="bg-primary rounded p-5 mt-5 text-center wow slideInUp" data-wow-delay="0.1s">
+                        <h3 class="text-white mb-4">Боїтеся почати знімати себе?</h3>
+                        <p class="text-white mb-4">Ми проводимо зйомку-супровід для власників: допомагаємо розслабитися в кадрі, говорити природно та будувати особистий бренд, який продає. Отримайте безкоштовний аудит + план перших 10 роликів за 24 години!</p>
+                        <a href="#quote-form" class="btn btn-dark py-3 px-5">Замовити безкоштовний аудит</a>
                     </div>
-                    
-                    <div class="bg-primary rounded p-5 mt-5 text-center">
-                        <h3 class="text-white mb-3">Боїтеся почати?</h3>
-                        <p class="text-white">Ми проводимо зйомку-супровід для власників. Допомагаємо розслабитися в кадрі і говорити природно.</p>
-                        <a href="#quote" class="btn btn-dark py-2 px-4 mt-3">Записатися на Тест-драйв</a>
+                </div>
+            </div>
+
+            <!-- Сайдбар справа — ТОЧНО ТВІЙ ОРИГІНАЛЬНИЙ, без змін -->
+            <div class="col-lg-4">
+                <!-- Category Start -->
+                <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                        <h3 class="mb-0">Категорії</h3>
+                    </div>
+                    <div class="link-animated d-flex flex-column justify-content-start">
+                        <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="/production.html"><i class="bi bi-arrow-right me-2"></i>Відеопродакшен</a>
+                        <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="viral-smm-content.html"><i class="bi bi-arrow-right me-2"></i>SMM & Reels</a>
+                        <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="content-funnel-2025.html"><i class="bi bi-arrow-right me-2"></i>Воронки Продажів</a>
+                        <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="low-budget-ads.html"><i class="bi bi-arrow-right me-2"></i>Бюджетний Маркетинг</a>
+                        <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="personal-brand.html"><i class="bi bi-arrow-right me-2"></i>Особистий Бренд</a>
+                    </div>
+                </div>
+                <!-- Recent Post Start -->
+                <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                        <h3 class="mb-0">Свіжі публікації</h3>
+                    </div>
+                    <div class="d-flex rounded overflow-hidden mb-3">
+                        <img class="img-fluid" src="/img/blog-4.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                        <a href="video-strategy.html" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Стратегія відео для малого бізнесу 2025</a>
+                    </div>
+                    <div class="d-flex rounded overflow-hidden mb-3">
+                        <img class="img-fluid" src="/img/blog-2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                        <a href="content-funnel-2025.html" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Автоворонки 2025: Reels → Бот → Продаж</a>
+                    </div>
+                    <div class="d-flex rounded overflow-hidden mb-3">
+                        <img class="img-fluid" src="/img/blog-3.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                        <a href="viral-smm-content.html" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Як знімати вірусні Reels на телефон</a>
+                    </div>
+                    <div class="d-flex rounded overflow-hidden mb-3">
+                        <img class="img-fluid" src="/img/blog-1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                        <a href="youtube-seo.html" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">YouTube Shorts для локального бізнесу</a>
+                    </div>
+                </div>
+                <!-- Жовтий блок -->
+                <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    <div style="background: #f2a900; padding: 20px; text-align: center; border-radius: 5px;">
+                        <h4 style="color: #000;">Потрібен розбір?</h4>
+                        <p style="color: #000; font-size: 14px;">Запишіться на безкоштовну 20-хвилинну консультацію по відеомаркетингу</p>
+                        <a href="#quote-form" class="btn btn-dark btn-sm">Записатися</a>
+                    </div>
+                </div>
+                <!-- Tags Start — оновлено під нову тему -->
+                <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                        <h3 class="mb-0">Теги</h3>
+                    </div>
+                    <div class="d-flex flex-wrap m-n1">
+                        <a href="#" class="btn btn-light m-1">Особистий бренд</a>
+                        <a href="#" class="btn btn-light m-1">Власник в кадрі</a>
+                        <a href="#" class="btn btn-light m-1">Довіра клієнтів</a>
+                        <a href="#" class="btn btn-light m-1">Страх камери</a>
+                        <a href="#" class="btn btn-light m-1">Stories</a>
+                        <a href="#" class="btn btn-light m-1">Reels 2025</a>
+                        <a href="#" class="btn btn-light m-1">Експертність</a>
+                        <a href="#" class="btn btn-light m-1">Процеси бізнесу</a>
+                        <a href="#" class="btn btn-light m-1">Помилки власника</a>
+                        <a href="#" class="btn btn-light m-1">Супровід зйомки</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!-- Stattya End -->
+  
+    
+            
 
-    <!-- Quote Start -->
-    <div id="quote" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+
+    <!-- Quote/Contact Form Start (СКОПІЙОВАНО З index (1).html) -->
+    <div id="quote-form" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">ЗВ'ЯЗОК</h5>
-                        <h1 class="mb-0">Розвивайте особистий бренд</h1>
+                        <h5 class="fw-bold text-primary text-uppercase">ЗАПИТ НА КОШТОРИС</h5>
+                        <h1 class="mb-0">Потрібен безкоштовний кошторис? Будь ласка, зв’яжіться з нами</h1>
                     </div>
-                    <p class="mb-4">Залиште заявку на консультацію по особистому бренду.</p>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Відповідь протягом 24 годин</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>Цілодобова телефонна підтримка</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="phone-form">
+                            <h5 class="mb-2" style="color: black;">Ми зв'яжемося з вами протягом 30 секунд</h5>
+                            <!-- Changed ID to phoneForm to match production.html logic -->
+                            <form id="phoneForm">
+                                <div class="row g-3 phone-form">
+                                    <div class="col-xl-12" style="width: 300px;">
+                                        <input type="text" name="Телeфон" class="form-control border-0" placeholder="Ваш телфон" style="width: 300px; height: 50px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-dark" style="width: 300px;" type="submit">Зв’язатися</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form id="bigForm">
+                         <!-- Changed ID to bigForm to match production.html logic -->
+                        <form id="bigForm" class="contact-form">
                             <div class="row g-3">
-                                <div class="col-xl-12">
-                                    <input type="text" name="name" class="form-control bg-light border-0" placeholder="Ім'я" style="height: 55px;">
+                                <div class="col-12">
+                                    <input type="text" name="name" class="form-control bg-light border-0" placeholder="Ім'я" required style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" name="Телефон" class="form-control bg-light border-0" placeholder="Ваш телефон" style="height: 55px;">
+                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;" name="Продукт">
-                                        <option selected>Оберiть послугу</option>
-                                        <option value="Особистий Бренд">Особистий Бренд</option>
-                                        <option value="Консультація">Консультація</option>
+                                    <input type="text" name="Телефон" class="form-control bg-light border-0" placeholder="Ваш телефон *" required style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <select name="Продукт" class="form-select bg-light border-0" required style="height: 55px;">
+                                        <option selected>Оберіть послугу</option>
+                                        <option value="SMM">SMM</option>
+                                        <option value="Відео продакшн">Відео продакшн</option>
+                                        <option value="Рилсы">Рилсы</option>
+                                        <option value="Реклама">Реклама</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="Повідомлення"></textarea>
+                                    <textarea name="message" class="form-control bg-light border-0" rows="5" placeholder="Повідомлення"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-dark w-100 py-3" type="submit">Зв’язатися</button>
@@ -162,21 +362,146 @@
             </div>
         </div>
     </div>
-    <!-- Quote End -->
+    <!-- Quote/Contact Form End -->
 
-    <!-- Footer Standard -->
-    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container"><div class="row gx-5"><div class="col-lg-12 text-center pt-5 pb-5"><p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Paparazzi</a>. Всі права захищені.</p></div></div></div>
-    </div>
+
+
     
+
+ <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="/index.html" class="navbar-brand">
+                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Paparazzi</h1>
+                        </a>
+                        <p class="mt-3 mb-4">Залишайте заявку на консультацію</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <button class="btn btn-dark">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Зв'яжіться з нами</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Kyiv, Ukraine</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">sendpaparazzi@gmail.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+38 095 058 0868</p>
+                            </div>
+                          <div class="d-flex">
+    <!-- Instagram -->
+    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+       href="https://www.instagram.com/paparazzi.prod" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Instagram Paparazzi">
+        <i class="fab fa-instagram fw-normal"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+       href="https://www.tiktok.com/@paparazzi.prod" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="TikTok Paparazzi">
+        <i class="fab fa-tiktok fw-normal"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+       href="https://www.youtube.com/@Paparazzicam" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="YouTube Paparazzi">
+        <i class="fab fa-youtube fw-normal"></i>
+    </a>
+                            <!-- Telegram (запасной, если захочешь) -->
+     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+      href="https://t.me/paparazzi_cam" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      aria-label="Telegram">
+       <i class="fab fa-telegram-plane fw-normal"></i></a>
+</div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Перехід</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="/index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Головна</a>
+                                <a class="text-light mb-2" href="/production.html"><i class="bi bi-arrow-right text-primary me-2"></i>Продакшн</a>
+                                <a class="text-light mb-2" href="/marketing.html"><i class="bi bi-arrow-right text-primary me-2"></i>Маркетинг</a>               
+                                <a class="text-light mb-2" href="/blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light" href="/contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Зв'язок</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Популярні</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="/contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Зв'язок</a>
+                                <a class="text-light mb-2" href="/marketing.html"><i class="bi bi-arrow-right text-primary me-2"></i>Маркетинг</a>
+                                <a class="text-light mb-2" href="/blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light mb-2" href="/production.html"><i class="bi bi-arrow-right text-primary me-2"></i>Продакшн</a>
+                                <a class="text-light" href="/index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Головна</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Paparazzi</a>. All Rights Reserved.                                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/counterup/counterup.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/telegram-forms.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/counterup/counterup.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
+    
+    <!-- Telegram forms logic added here as per production page -->
+    <script src="/js/telegram-forms.js"></script>
 </body>
+
 </html>
