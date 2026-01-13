@@ -699,3 +699,48 @@ strong {
 .service-card .btn {
     pointer-events: none; /* кнопка не клікабельна, бо весь блок вже веде за посиланням */
 }
+/* Убираем старое ограничение */
+.me-logo {
+    --size: unset !important;
+    height: 100% !important;
+    width: auto !important;
+    min-height: 60px !important;     /* не меньше этого даже на узком экране */
+    object-fit: contain;
+}
+
+/* Десктоп — делаем крупнее */
+@media (min-width: 992px) {
+    .navbar {
+        --bs-navbar-padding-y: 1.25rem; /* ~20px сверху/снизу → навбар ~90-100px */
+    }
+    
+    .me-logo {
+        max-height: 110px;            /* подбери 90–140px под свой вкус */
+    }
+    
+    .navbar-brand h1 {
+        font-size: 2.8rem !important;
+    }
+}
+
+/* Мобильный — разумный размер */
+@media (max-width: 991.98px) {
+    .me-logo {
+        height: 58px !important;
+        min-height: 58px !important;
+    }
+    
+    .navbar-brand h1 {
+        font-size: 1.9rem !important;
+    }
+    
+    .navbar {
+        --bs-navbar-padding-y: 0.75rem;
+    }
+}
+
+/* Очень важно — не даём всей левой части сжиматься */
+.navbar-brand {
+    flex-shrink: 0 !important;
+    min-width: 220px !important;       /* минимальная ширина для лого+текст */
+}
