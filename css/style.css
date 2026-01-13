@@ -700,18 +700,50 @@ strong {
     pointer-events: none; /* кнопка не клікабельна, бо весь блок вже веде за посиланням */
 }
 
-/* Робимо логотип на всю висоту навбару на десктопі, а на мобілках — компромісний розмір */
+/* 1. Знімаємо всі обмеження з .me-logo */
 .me-logo {
-    height: 100% !important;
+    height: 100% !important;          /* на всю висоту .navbar-brand */
     width: auto !important;
-    max-width: 240px;           /* обмежуємо, щоб не розтягнув весь навбар */
-    --size: unset !important;   /* повністю вимикаємо vw-магічну залежність */
+    max-width: none !important;       /* щоб не стискало по ширині */
+    min-width: 60px;                  /* мінімальний розмір, щоб не зникало */
     object-fit: contain;
+    --size: unset !important;         /* вимикаємо твої 3vw назавжди */
 }
 
-@media (max-width: 991px) {
+/* 2. Даємо .navbar-brand більше місця і знімаємо padding */
+.navbar-brand {
+    padding: 0 !important;            /* знімаємо всі падінги Bootstrap */
+    margin-right: 1.5rem !important;  /* трохи відступу від меню */
+    height: 100%;                     /* щоб логотип міг рости */
+    display: flex !important;
+    align-items: center;
+}
+
+/* 3. Робимо .me-container гнучким, щоб логотип + h1 не стискалися */
+.me-container {
+    flex: 1 1 auto !important;        /* дозволяє рости */
+    min-width: 180px !important;      /* мінімальна ширина для логотипу + тексту */
+    gap: 0.75rem;                     /* відстань між логотипом і h1 */
+}
+
+/* 4. Текст "Paparazzi" теж нехай росте пропорційно */
+.navbar-brand h1 {
+    font-size: 2.2rem !important;     /* або 2.5rem, якщо хочеш більший */
+    margin: 0 !important;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* 5. На мобілках зменшуємо все, щоб не вилазило */
+@media (max-width: 991.98px) {
     .me-logo {
-        height: 52px !important;    /* або 44–48px, якщо хочеш компактніше */
-        max-width: 180px;
+        height: 52px !important;      /* або 44px, 48px — підбери */
+        min-width: 52px;
+    }
+    .navbar-brand h1 {
+        font-size: 1.6rem !important;
+    }
+    .me-container {
+        min-width: 140px !important;
     }
 }
