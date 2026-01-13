@@ -135,41 +135,34 @@
 <!-- Topbar End -->
 
 
-    <!-- Navbar & Carousel Start -->
+        <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-4 px-lg-5 py-3 py-lg-4">
-  <!-- Увеличили вертикальный padding на десктопе -->
-  
-  <a href="index.html" class="navbar-brand d-flex align-items-center gap-3 p-0 flex-shrink-0">
-    <!-- Убрали свой me-container, используем flex от Bootstrap -->
-    <img class="me-logo" 
-         src="assets/logos/android-chrome-192x192.png" 
-         alt="Paparazzi Logo"
-         onerror="this.style.display='none'">
-    <h1 class="m-0 fs-2 fs-lg-1">Paparazzi</h1>
-  </a>
-
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-    <span class="fa fa-bars"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <div class="navbar-nav ms-auto py-0">
-      <a href="index.html" class="nav-item nav-link">Головна</a>
-      <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Послуги</a>
-        <div class="dropdown-menu m-0">
-          <a href="production.html" class="dropdown-item">Продакшн</a>
-          <a href="marketing.html" class="dropdown-item">Маркетинг</a>
-          <a href="digital.html" class="dropdown-item">Digital рiшення</a>
-        </div>
-      </div>
-      <a href="contact.html" class="nav-item nav-link">Контакти</a>
-      <a href="blog.html" class="nav-item nav-link">Блог</a>
-    </div>
-    <a href="#quote-form" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a>
-  </div>
-</nav>
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0 me-container">
+                <img class="me-logo" src="assets/logos/android-chrome-192x192.png" onerror="this.style.display='none'">
+                <h1 class="m-0"><i class="fa me-2"></i>Paparazzi</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Головна</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Послуги</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="production.html" class="dropdown-item">Продакшн</a>
+                            <a href="marketing.html" class="dropdown-item">Маркетинг</a>
+                            <a href="digital.html" class="dropdown-item">Digital рiшення</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Контакти</a>
+                    <a href="blog.html" class="nav-item nav-link">Блог</a>
+                </div>
+                <!-- ЗМІНЕНО: Кнопка Зв'язатися веде на форму внизу сторінки -->
+                <a href="#quote-form" class="btn btn-primary py-2 px-4 ms-3">Зв'язатися</a>
+            </div>
+        </nav>
         
 
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
