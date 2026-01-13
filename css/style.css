@@ -700,42 +700,54 @@ strong {
     pointer-events: none; /* кнопка не клікабельна, бо весь блок вже веде за посиланням */
 }
 
-/* Делаем navbar-brand максимально просторным */
+/* Делаем левую часть навбара жёстче по размеру */
 .navbar-brand {
-    display: flex !important;
-    align-items: center !important;
-    padding: 0 !important;           /* убираем лишние отступы Bootstrap */
-    height: 100% !important;         /* растягиваем контейнер на всю высоту навбара */
+    flex-shrink: 0 !important;          /* НЕ сжимается даже при нехватке места */
+    padding: 0 !important;
+    margin-right: 1.5rem !important;
 }
 
-/* Убираем ограничения от .me-container и делаем логотип главным */
-.me-container {
-    flex: 0 0 auto !important;       /* не растягиваем, но и не сжимаем */
-    margin-right: 12px !important;   /* небольшой отступ между лого и текстом */
-}
-
+/* Полностью убираем vw-зависимость и даём логотипу нормальный размер */
 .me-logo {
-    height: 100% !important;         /* ← вот оно, на всю высоту навбара */
+    --size: unset !important;
+    height: 100% !important;            /* растягиваем на всю высоту .navbar-brand */
     width: auto !important;
-    max-width: 280px !important;     /* чтобы не разъебал весь навбар */
-    --size: unset !important;        /* полностью выключаем твою vw-магию */
+    min-height: 60px !important;        /* не даём стать меньше этого */
+    min-width: 60px !important;
+    max-height: 85px;                   /* верхний предел на очень высоких навбарах */
     object-fit: contain;
 }
 
-/* Текст рядом с логотипом — чтобы не сжимался */
+/* Текст тоже не должен сжиматься */
 .navbar-brand h1 {
-    font-size: 2rem !important;      /* или 2.2rem — подбери под свой вкус */
+    font-size: 2.1rem !important;       /* или 2.3–2.5rem — подбери под вкус */
     margin: 0 !important;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
-/* На мобильных — чуть уменьшаем, чтобы не вылезало */
-@media (max-width: 991px) {
+/* На десктопе — всё большое */
+@media (min-width: 992px) {
     .me-logo {
-        height: 52px !important;     /* или 44px, если хочешь компактнее */
-        max-width: 180px !important;
+        max-height: 110px;              /* можешь даже 120–140px, если хочешь ОЧЕНЬ большой */
     }
     .navbar-brand h1 {
-        font-size: 1.6rem !important;
+        font-size: 2.8rem !important;
+    }
+}
+
+/* На мобильном и планшете — разумный компромисс */
+@media (max-width: 991.98px) {
+    .me-logo {
+        height: 54px !important;        /* 48–58px — самый популярный диапазон */
+        min-height: 54px !important;
+    }
+    
+    .navbar-brand h1 {
+        font-size: 1.7rem !important;
+    }
+    
+    .navbar-brand {
+        margin-right: 1rem !important;
     }
 }
