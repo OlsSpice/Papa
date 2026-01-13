@@ -699,3 +699,19 @@ strong {
 .service-card .btn {
     pointer-events: none; /* кнопка не клікабельна, бо весь блок вже веде за посиланням */
 }
+
+/* Робимо логотип на всю висоту навбару на десктопі, а на мобілках — компромісний розмір */
+.me-logo {
+    height: 100% !important;
+    width: auto !important;
+    max-width: 240px;           /* обмежуємо, щоб не розтягнув весь навбар */
+    --size: unset !important;   /* повністю вимикаємо vw-магічну залежність */
+    object-fit: contain;
+}
+
+@media (max-width: 991px) {
+    .me-logo {
+        height: 52px !important;    /* або 44–48px, якщо хочеш компактніше */
+        max-width: 180px;
+    }
+}
