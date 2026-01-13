@@ -700,50 +700,42 @@ strong {
     pointer-events: none; /* кнопка не клікабельна, бо весь блок вже веде за посиланням */
 }
 
-/* 1. Знімаємо всі обмеження з .me-logo */
-.me-logo {
-    height: 100% !important;          /* на всю висоту .navbar-brand */
-    width: auto !important;
-    max-width: none !important;       /* щоб не стискало по ширині */
-    min-width: 60px;                  /* мінімальний розмір, щоб не зникало */
-    object-fit: contain;
-    --size: unset !important;         /* вимикаємо твої 3vw назавжди */
-}
-
-/* 2. Даємо .navbar-brand більше місця і знімаємо padding */
+/* Делаем navbar-brand максимально просторным */
 .navbar-brand {
-    padding: 0 !important;            /* знімаємо всі падінги Bootstrap */
-    margin-right: 1.5rem !important;  /* трохи відступу від меню */
-    height: 100%;                     /* щоб логотип міг рости */
     display: flex !important;
-    align-items: center;
+    align-items: center !important;
+    padding: 0 !important;           /* убираем лишние отступы Bootstrap */
+    height: 100% !important;         /* растягиваем контейнер на всю высоту навбара */
 }
 
-/* 3. Робимо .me-container гнучким, щоб логотип + h1 не стискалися */
+/* Убираем ограничения от .me-container и делаем логотип главным */
 .me-container {
-    flex: 1 1 auto !important;        /* дозволяє рости */
-    min-width: 180px !important;      /* мінімальна ширина для логотипу + тексту */
-    gap: 0.75rem;                     /* відстань між логотипом і h1 */
+    flex: 0 0 auto !important;       /* не растягиваем, но и не сжимаем */
+    margin-right: 12px !important;   /* небольшой отступ между лого и текстом */
 }
 
-/* 4. Текст "Paparazzi" теж нехай росте пропорційно */
+.me-logo {
+    height: 100% !important;         /* ← вот оно, на всю высоту навбара */
+    width: auto !important;
+    max-width: 280px !important;     /* чтобы не разъебал весь навбар */
+    --size: unset !important;        /* полностью выключаем твою vw-магию */
+    object-fit: contain;
+}
+
+/* Текст рядом с логотипом — чтобы не сжимался */
 .navbar-brand h1 {
-    font-size: 2.2rem !important;     /* або 2.5rem, якщо хочеш більший */
+    font-size: 2rem !important;      /* или 2.2rem — подбери под свой вкус */
     margin: 0 !important;
-    line-height: 1;
     white-space: nowrap;
 }
 
-/* 5. На мобілках зменшуємо все, щоб не вилазило */
-@media (max-width: 991.98px) {
+/* На мобильных — чуть уменьшаем, чтобы не вылезало */
+@media (max-width: 991px) {
     .me-logo {
-        height: 52px !important;      /* або 44px, 48px — підбери */
-        min-width: 52px;
+        height: 52px !important;     /* или 44px, если хочешь компактнее */
+        max-width: 180px !important;
     }
     .navbar-brand h1 {
         font-size: 1.6rem !important;
-    }
-    .me-container {
-        min-width: 140px !important;
     }
 }
